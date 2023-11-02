@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from 'react';
 import PureCounter from "@srexi/purecounterjs";
 
 
@@ -48,7 +49,7 @@ const CountdownTimer2 = ({size, date, pot}) => {
   useEffect(() => {
     if(isNaN(timeLeft.days)) {
     return;
-    };
+    }
     new PureCounter();
   }, [timeLeft]);
 

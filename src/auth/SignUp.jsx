@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
-// import Container from "../components/Container";
 import Title from "../form/Title";
 import FormInput from "../form/FormInput";
 import Submit from "../form/Submit";
@@ -10,7 +9,7 @@ import FormContainer from "../form/FormContainer";
 import { createUser } from "../api/auth";
 import { useNotification, useAuth } from "../hooks";
 import { isValidEmail } from "../utils/helper";
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, } from 'react-bootstrap';
 import AOS from 'aos';
 import Selector from "../components/Selector";
 
@@ -25,6 +24,10 @@ const validateUserInfo = ({ name, email, password, type }) => {
   if (!email.trim()) return { ok: false, error: "Email is missing!" };
   if (!isValidEmail(email)) return { ok: false, error: "Invalid email!" };
   if (!type.trim()) return { ok: false, error: "Type is missing!" };
+
+  if (type === "student" && !email.endsWith(".edu")) {
+    return { ok: false, error: "Student email must end in .edu!" };
+  }
 
 
   if (!password.trim()) return { ok: false, error: "Password is missing!" };
@@ -48,9 +51,9 @@ export default function SignUp() {
   });
 
   const typeOptions = [
-    { title: "Student", value: "student" },
+    { title: "Student (must have .edu email)", value: "student" },
     { title: "Donor", value: "donor" },
-    // { title: "Other", value: "other" },
+    { title: "Freshman (must prove school enrolment for payment)", value: "fresh" },
   ];
   
 
@@ -113,7 +116,6 @@ export default function SignUp() {
                   <Title >Sign Up</Title>
                   <FormInput value={name} onChange={handleChange} label="Name" name="name"  placeholder="Your Name" />
                   <FormInput value={email} onChange={handleChange} label="Email" name="email"  placeholder="your@email.com" />
-                  {/* <FormInput value={type} onChange={handleChange} label="Type" name="type"  placeholder="student" /> */}
                   <div className="mb-3 mx-2">
                   <Selector
                     options={typeOptions}

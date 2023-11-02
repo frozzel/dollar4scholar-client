@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+/* eslint-disable react/prop-types */
+import   {useEffect, useState} from 'react';
 import { Button } from 'react-bootstrap';
-// import PureCounter from "@srexi/purecounterjs";
 import { useAuth } from "../hooks";
 import NotVerified from '../components/NotVerified';
 import { useParams } from 'react-router-dom';
@@ -89,11 +89,13 @@ const DonorDashboard = ({pot, date}) => {
 
       //add wallet funds on click
       const handleOnEditClickWallet = () => {
-        const { id, name, wallet} = user;
+        const { id, name, wallet, email, stripeId} = user;
         setWallet({
           id,
           name,
           wallet,
+          email,
+          stripeId
         })
         setShowWalletModal(true);
       };
@@ -188,10 +190,6 @@ const DonorDashboard = ({pot, date}) => {
 
   const { name, avatar, address, phone, wallet } = user;
 
-
-
-
-
   return (
     <main id="main">
     <Breadcrumbs />
@@ -269,18 +267,18 @@ const DonorDashboard = ({pot, date}) => {
               </div>
               {/* <StatisticsSection /> */}
               <div className="container-fluid">
-      <section>
-        <div className="row">
-          {contribution.map((c, index ) => (
-            <CardComponent
-              key={index}
-              amount={c.amount}
-              date={c.date}
-            />
-          ))}
-        </div>
-      </section>
-    </div>
+              <section>
+                  <div className="row">
+                    {contribution.slice().reverse().map((c, index) => (
+                      <CardComponent
+                        key={index}
+                        amount={c.amount}
+                        date={c.date}
+                      />
+                    ))}
+                  </div>
+              </section>
+              </div>
 
             </div>
           </div>

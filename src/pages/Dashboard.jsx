@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import { getCurrentPot } from '../api/scholarship';
 import { Button } from 'react-bootstrap';
 import { useAuth } from "../hooks";
@@ -211,7 +211,7 @@ const Dashboard = () => {
     
 
   //check and see if user is student or not
-  if (user.type === "student") {
+  if (user.type === "student" || user.type === "fresh") {
   return (
     <main id="main">
                   <div className="text-danger text-center">{message}</div>

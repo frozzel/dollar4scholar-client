@@ -23,8 +23,8 @@ export default function Footer() {
           <div className="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="/Collegesnuniversities">Universities</a></li>
-              <li><a href="Investors">Investors</a></li>
+              <li><a href="//DonorSpotLight">Donor Spotlight</a></li>
+              <li><a href="/Winner">Winner</a></li>
               <li><a href="/Contact">Contact</a></li>
               <li><a href="/About">About</a></li>
               

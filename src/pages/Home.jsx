@@ -1,5 +1,5 @@
 // Desc: Home page for the app
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import { getCurrentPot } from '../api/scholarship';
 import Hero from './Home/Hero.jsx'
 import NotVerified from '../components/NotVerified.jsx';
@@ -9,6 +9,7 @@ import GLightbox from 'glightbox';
 import CountdownTimer2 from '../components/Counter2.jsx';
 import { Container } from 'react-bootstrap';
 import AOS from 'aos';
+import { useNotification } from "../hooks";
 
 const About = ({pot, date}) => {
   useEffect(() => {
@@ -80,6 +81,7 @@ export default function Home() {
   const { authInfo } = useAuth();
   const {isLoggedIn} = authInfo;
   const isVerified = authInfo.profile?.isVerified;
+  const { updateNotification } = useNotification();
   
   
   // get current pot amount
@@ -93,8 +95,6 @@ export default function Home() {
     if(dateStarted !== undefined) {
       setDate(dateStarted);
     }
-    // setDate(dateStarted);
-    // setPot(scholarship.pot);
   
   }
   useEffect( () => {

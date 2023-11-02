@@ -64,6 +64,23 @@
       background: $primary;
     }
   }
+  .btn-get-started2 {
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid $primary;
+    text-transform: uppercase;
+    color: #fff;
+    &:hover {
+      background: $primary;
+    }
+  }
 
   @media (min-width: 1024px) {
     background-attachment: fixed;

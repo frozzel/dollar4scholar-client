@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+/* eslint-disable react/prop-types */
+import {useEffect, useState} from 'react';
 import { useAuth } from "../hooks";
 import NotVerified from '../components/NotVerified';
 import { useParams } from 'react-router-dom';

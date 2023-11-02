@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import {  useState } from "react";
 import { ImSpinner3 } from "react-icons/im";
 import { Button } from "react-bootstrap";
 
-const defaultUserInfo = {
-  name: "",
-  wallet: "",
-};
 
 export default function DonateForm({
   title,
@@ -23,6 +20,12 @@ export default function DonateForm({
 
   const handleChange = ({ target }) => {
     const { value, name } = target;
+    if (name === 'wallet') {
+      if (parseFloat(value) > 10) {
+        alert("Please enter a value less than or equal to 10.");
+        return;
+      }
+    }
     setUserInfo({ ...userInfo, [name]: value });
   };
 
@@ -69,7 +72,7 @@ export default function DonateForm({
                 <p className="" style={{color: "#94c045", fontSize: 32}}>${initialState.wallet}</p>
             </div>
           <input
-            placeholder="Tickets are $1 per entry!"
+            placeholder="Tickets $1, max 10 entries"
             type="text"
             className="form-control border-bottom bg-transparent mb-1"
             name="wallet"
