@@ -620,6 +620,25 @@ input[type=number] {
 #hero .btn-get-started:hover {
   background: #94c045;
 }
+#hero .btn-get-started2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #94c045;
+  text-transform: uppercase;
+  color: #fff;
+  background: #94c045;
+}
+
+#hero .btn-get-started2:hover {
+  background: transparent;
+}
 
 #hero .hero-container form input[type=email] {
   border: 0;

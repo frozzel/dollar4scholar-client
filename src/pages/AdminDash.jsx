@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react';
+/* eslint-disable react/prop-types */
+import {useEffect, useState} from 'react';
 import { useAuth } from "../hooks";
 import NotVerified from '../components/NotVerified';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useNotification } from "../hooks";
 import { getDonations, getAllWinners, getNumberOfUsers } from '../api/scholarship';
 import AOS from 'aos';
@@ -10,7 +11,6 @@ import {CgProfile} from "react-icons/cg";
 import {FaUserGraduate} from "react-icons/fa";
 import {BsCoin} from "react-icons/bs";
 import admin from '../assets/img/admin.jpg';
-import women from '../assets/img/women.png';
 
 
 
@@ -34,8 +34,6 @@ const AdminDash = ({pot, date}) => {
     const { authInfo } = useAuth();
     const { isLoggedIn } = authInfo;
     const isVerified = authInfo.profile?.isVerified;
-    const {userId} = useParams();
-    const { updateNotification } = useNotification();
     const {notification} = useNotification();
  
 
@@ -157,6 +155,7 @@ function StatisticsSection() {
     fetchUsers();
   }, [])
 
+
   return (
     <div className="container-fluid">
       <section className='' style={{padding: 0}}>
@@ -196,7 +195,7 @@ function StatisticsSection() {
                     </div>
                   </div>
                   <div className="align-self-center">
-                    <h2 className="h1 mb-0">{users.studentCount}</h2>
+                    <h2 className="h1 mb-0">{users.studentCount + users.freshmanCount}</h2>
                   </div>
                 </div>
               </div>
