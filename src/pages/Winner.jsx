@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import { useEffect, useState} from 'react';
 import AOS from 'aos';
 import { useWindowSize } from "@uidotdev/usehooks";
 import Confetti from 'react-confetti'
@@ -6,7 +6,7 @@ import { getWinner } from '../api/scholarship';
 import './winner.css'
 import { getCurrentPot } from '../api/scholarship';
 import CountdownTimer2 from '../components/Counter2.jsx';
-
+import gooffy from '../assets/img/profile.jpeg';
 
 
 const Breadcrumbs = () => {
@@ -58,7 +58,7 @@ const Breadcrumbs = () => {
                       {avatar ? (
                           <img src={avatar.url} title="" alt="" className="rounded-circle img-fluid mx-auto"/>
                       ) : (
-                          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="avatar holder" className=" img-fluid mx-auto mt-5" />
+                          <img src={gooffy} title="" alt="avatar holder" className=" rounded-circle img-fluid mx-auto" style={{maxHeight: "450px"}}/>
                       )}
 
                       
@@ -102,7 +102,7 @@ const Winner = () => {
 
     const fetchPot = async () => {
       const {error, scholarship} = await getCurrentPot();
-      if (error) return updateNotification("error", error);
+      if (error) return alert("error", error);
       const dateStarted = new Date(scholarship.dateStarted); // Convert to valid date format
       if(scholarship.pot !== undefined) {
         setPot(scholarship.pot);
@@ -116,7 +116,7 @@ const Winner = () => {
     const fetchWinner = async () => {
         const {error, winner} = await getWinner();
         const {pot} = winner;
-        if (error) return updateNotification("error", error);
+        if (error) return alert("error", error);
         setWinner(winner.winner);
         setPotWinner(pot);
       }

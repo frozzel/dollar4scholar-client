@@ -11,6 +11,7 @@ import {CgProfile} from "react-icons/cg";
 import {FaUserGraduate} from "react-icons/fa";
 import {BsCoin} from "react-icons/bs";
 import admin from '../assets/img/admin.jpg';
+import gooffy from '../assets/img/profile.jpeg';
 
 
 
@@ -313,7 +314,14 @@ const ActiveWinners = () => {
               <Link to={`/AdminWinnerInfo/${w._id}`} key={index}>
               <li className="list-group-item d-flex align-items-center justify-content-between p-3" key={index}>
                 <div className="col-2">
-                  <img src={w.winner?.avatar.url} alt="avatar" className="fas fa-globe fa-lg text-warning rounded-circle img-fluid" style={{ width: '40px', objectFit: 'cover' }} />
+                  {w.winner?.avatar?.url ? (
+                                        <img src={w.winner?.avatar?.url} alt="avatar" className="fas fa-globe fa-lg text-warning rounded-circle img-fluid" style={{ width: '40px', objectFit: 'cover' }} />
+
+                  ) : (
+                    <img src={gooffy} alt="admin" className="rounded-circle img-fluid" style={{ width: '40px', objectFit: 'cover' }} />
+                  )
+
+}
                 </div>
                 <div className="col-2" style={{textAlign: "center"}}>
                   <p className="mb-0">{w.winner?.name}</p>

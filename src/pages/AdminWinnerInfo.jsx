@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+/* eslint-disable react/prop-types */
+import {useEffect, useState} from 'react';
 import { useAuth } from "../hooks";
 import './winner.css'
 import NotVerified from '../components/NotVerified';
@@ -6,8 +7,9 @@ import { useParams } from 'react-router-dom';
 import { useNotification } from "../hooks";
 import { getWinnerById, setActiveStatus } from "../api/scholarship";
 import AOS from 'aos';
-import NotFound from './NotFound';
 import { Button } from 'react-bootstrap';
+import gooffy from '../assets/img/profile.jpeg';
+
 
 
 
@@ -70,12 +72,12 @@ const AdminWinnerInfo = () => {
         if (error) return updateNotification("error", error);
 
         setActive(true); // Update active state to false
-        };
+        }
     }
 
     useEffect(() => {
         if (userId)fetchProfile() && window.scrollTo(0, 0);
-    }, [userId]);
+    }, [authInfo, userId]);
 
     useEffect(() => {
         setMessage(notification)
@@ -127,7 +129,7 @@ const AdminWinnerInfo = () => {
                       {avatar ? (
                           <img src={avatar.url} title="" alt="" className="rounded-circle img-fluid mx-auto"/>
                       ) : (
-                          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="avatar holder" className=" img-fluid mx-auto mt-5" />
+                          <img src={gooffy} title="" alt="avatar holder" className="rounded-circle img-fluid mx-auto" style={{maxHeight: "400px"}} />
                       )}
                   </div>
               </div>
@@ -162,7 +164,11 @@ const AdminWinnerInfo = () => {
 } else {
     return (
         <main id="main">
-            <NotFound />
+      <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+        <p className="text-muted">
+          You are not authorized to view this page
+        </p>
+      </div>
         </main>
     );
 }

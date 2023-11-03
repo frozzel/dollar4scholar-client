@@ -68,7 +68,7 @@ const CountdownTimer2 = ({size, date, pot}) => {
 
                                         {/* <span>{pot}</span> */}
                             
-                                                                                <p>This Weeks Pot</p>
+                                                                                <p>This Weeks Pot *</p>
                                     </div>
                                     </div>
                                     <div className="col-lg-4 col-md-5 col-6 text-center">

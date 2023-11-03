@@ -13,6 +13,8 @@ import DonorDashboard from './DonorDash';
 import Counter from '../components/Counter';
 import UserBuyIn from '../components/UserBuyIn';
 import AdminDash from './AdminDash';
+import gooffy from '../assets/img/profile.jpeg';
+
 
 
 
@@ -207,11 +209,23 @@ const Dashboard = () => {
     }
 
   const { name, avatar,  major, address, email, phone, birth, school, wallet} = user;
+
+  if (userId !== authInfo.profile.id) {
+    return (
+      <main id="main">
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <p className="text-muted">
+        You are not authorized to view this page
+      </p>
+    </div>
+      </main>
+  );
+  }
     
     
 
   //check and see if user is student or not
-  if (user.type === "student" || user.type === "fresh") {
+  if (user.type === "student" || user.type === "fresh" && userId === authInfo.profile.id) {
   return (
     <main id="main">
                   <div className="text-danger text-center">{message}</div>
@@ -238,7 +252,7 @@ const Dashboard = () => {
                 {avatar ? (
                     <img src={avatar} alt={name} className="rounded-circle img-fluid mx-auto" style={{ width: '150px' }} />
                 ) :(
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" className="rounded-circle img-fluid mx-auto" style={{ width: '150px' }} />
+                    <img src={gooffy} alt="avatar" className="rounded-circle img-fluid mx-auto" style={{ width: '150px' }} />
 
                 )
                 }
