@@ -64,7 +64,7 @@ const CountdownTimer = ({ size, pot, date }) => {
                                   <div className="count-box py-4 text-center">
                                       <i className="bi bi-coin text-center"></i>
                                       <span  data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end={pot} className="purecounter">0</span>
-                                      <p>This Weeks Pot</p>
+                                      <p>This Weeks Pot *</p>
                                   </div>
                                   </div>
                                   <div className="col-lg-4 col-md-5 col-6 text-center">

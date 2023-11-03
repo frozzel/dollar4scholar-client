@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 import { useNotification } from "../hooks";
 import { getProfile } from "../api/user";
 import AOS from 'aos';
-import NotFound from './NotFound';
 
 
 
@@ -60,7 +59,7 @@ const AdminDonorInfo = () => {
 
     useEffect(() => {
         if (userId)fetchProfile() && window.scrollTo(0, 0);
-    }, [userId]);
+    }, [authInfo, userId]);
 
     useEffect(() => {
         setMessage(notification)
@@ -150,10 +149,14 @@ const AdminDonorInfo = () => {
   );
 } else {
     return (
-        <main id="main">
-            <NotFound />
-        </main>
-    );
+      <main id="main">
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <p className="text-muted">
+        You are not authorized to view this page
+      </p>
+    </div>
+      </main>
+  );
 }
 };
 

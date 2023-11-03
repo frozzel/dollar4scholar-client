@@ -84,11 +84,11 @@ const ContactSection = () => {
                 <h4>Email:</h4>
                 <p>info@dollar4scholar.com</p>
               </div>
-              <div className="phone">
+              {/* <div className="phone">
                 <i className="bi bi-phone"></i>
                 <h4>Call:</h4>
                 <p>(678) 555-5555</p>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-lg-8 mt-5 mt-lg-0" data-aos="fade-up">
