@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import logo from '../assets/img/Dollar4Scholar-Logo.png';
 import  NotificationProvider from '../context/NotificationProvider';
 import { useAuth } from '../hooks';

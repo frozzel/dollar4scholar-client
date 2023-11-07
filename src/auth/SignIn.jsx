@@ -66,8 +66,9 @@ export default function SignIn() {
 
   return (
 
-  <section className="vh-80">
+  
     <main id="main">
+      <section className="vh-100">
       <Container  className="py-5 h-100 " data-aos="fade-up">
         <Row className="d-flex align-items-center justify-content-center h-100">
           <Col md={8} lg={7} xl={6}>
@@ -97,8 +98,10 @@ export default function SignIn() {
           </Col>
         </Row>
       </Container>
+      </section>
+
      </main>
-    </section>
+   
 
 
   );

@@ -36,7 +36,7 @@ const CheckoutForm = () => {
     }, []);
 
   return (
-    <main id="main" style={{marginTop: "200px"}}>
+    <main id="main" style={{marginTop: "200px", marginBottom: "20px"}}>
     <div id="checkout">
       {clientSecret && (
         <EmbeddedCheckoutProvider

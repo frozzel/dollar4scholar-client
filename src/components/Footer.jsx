@@ -6,7 +6,7 @@ export default function Footer() {
   return (
   <>
   <footer id="footer"  >
-  <div className="footer-top " style={{padding: "1rem"}}>
+  <div className="footer-top " style={{padding: "2rem"}}>
     <div className="container"  >
         <div className="row" >
 {/* 
