@@ -196,7 +196,7 @@ const CardComponent = ({ birth, email, address, phone, dateStarted, dateFinished
                                     </div>
                                     <div className="media">
                                         <label>Profit</label>
-                                        <p>${Math.round(pot * 10)/100}</p>
+                                        <p>${Math.round(pot * 15)/100}</p>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -214,7 +214,7 @@ const CardComponent = ({ birth, email, address, phone, dateStarted, dateFinished
                                     </div>
                                     <div className="media">
                                         <label>Pay Out</label>
-                                        <p>${pot - Math.round(pot * 10)/100}</p>
+                                        <p>${pot - Math.round(pot * 15)/100}</p>
                                     </div>
                                     <div className="media">
                                         <label>Active</label>

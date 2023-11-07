@@ -12,6 +12,7 @@ import {FaUserGraduate} from "react-icons/fa";
 import {BsCoin} from "react-icons/bs";
 import admin from '../assets/img/admin.jpg';
 import gooffy from '../assets/img/profile.jpeg';
+import  PieChart  from "../components/PieChart";
 
 
 
@@ -90,12 +91,17 @@ const AdminDash = ({pot, date}) => {
         <div className="row ">
           <div className="col-lg-4">
             <div className="card mb-4">
-              <div className="card-body text-center p-0">
-            
-                <img src={admin} alt="admin" className="rounded-rectangle img-fluid mx-auto" style={{ width: '250px', objectFit: 'cover', backgroundColor: '#eee'}} />
+              <div className="card-body text-center ">
+              <div className=" text-center">
+                  <h5 className="text-center ">Open/Closed Tickets</h5>
+                </div>
+                <div >
+                <PieChart />  
+                </div>
+                {/* <img src={admin} alt="admin" className="rounded-rectangle img-fluid mx-auto" style={{ width: '250px', objectFit: 'cover', backgroundColor: '#eee'}} />
                 <div className="mb-1 text-center">
                   Image by <a href="https://www.freepik.com/free-vector/flat-customer-support-illustration_13184991.htm#query=admin&position=7&from_view=search&track=sph">Freepik</a>
-                </div>
+                </div> */}
               </div>
              
             </div>

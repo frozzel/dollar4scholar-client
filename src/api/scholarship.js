@@ -139,3 +139,13 @@ export const getSessionStatus = async (sessionId) => {
     return catchError(error);
   }
 }
+
+// path to get active status
+export const getActiveStatus = async () => {
+  try {
+    const { data } = await client.get(`/scholarship/active`);
+    return data;
+  } catch (error) {
+    return catchError(error);
+  }
+}

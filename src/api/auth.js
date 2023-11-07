@@ -1,5 +1,5 @@
 import client from "./client";
-import { catchError } from "../utils/helper.jsx";
+
 
 
 export const createUser = async (userInfo) => {
@@ -8,7 +8,7 @@ export const createUser = async (userInfo) => {
     const { data } = await client.post("/user/create", userInfo);
     return data;
   } catch (error) {
-    console.log('error: ',error);
+    
     const { response } = error;
     if (response?.data) return response.data;
 
@@ -21,7 +21,7 @@ export const verifyUserEmail = async (userInfo) => {
     const { data } = await client.post("/user/verify-email", userInfo);
     return data;
   } catch (error) {
-    return catchError(error);
+    
     const { response } = error;
     if (response?.data) return response.data;
 

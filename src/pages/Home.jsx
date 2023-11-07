@@ -5,12 +5,13 @@ import { getCurrentPot } from '../api/scholarship';
 import Hero from './Home/Hero.jsx'
 import NotVerified from '../components/NotVerified.jsx';
 import { useAuth } from "../hooks";
-import  videoPlaceHolder from '../assets/img/webpic.png'
+// import  videoPlaceHolder from '../assets/img/webpic.png'
 import GLightbox from 'glightbox';
-import CountdownTimer2 from '../components/Counter2.jsx';
+import CountdownTimer from '../components/Counter.jsx';
 import { Container } from 'react-bootstrap';
 import AOS from 'aos';
 import { useNotification } from "../hooks";
+import Gallery from './Home/Gallary.jsx';
 
 const About = ({pot, date}) => {
   useEffect(() => {
@@ -29,12 +30,13 @@ const About = ({pot, date}) => {
 
 <section id="about" className="about justify-content-between " data-aos="fade-up" data-aos-delay="400" style={{paddingBottom: "4rem" }} >
     <Container className="container " >
-    <CountdownTimer2 size={"col-lg-6"} pot={pot} date={date}  />
+    <CountdownTimer size={"col-lg-6"} pot={pot} date={date}  />
 
       <div className="row">
         <div className="col-lg-6 video-box align-self-baseline position-relative">
-          <img src={videoPlaceHolder } className="img-fluid" alt="" />
-          <a href="https://www.youtube.com/watch?v=RuZglxY4EuM" className="glightbox play-btn mb-4"></a>
+        <Gallery />
+          {/* <img src={videoPlaceHolder } className="img-fluid" alt="" />
+          <a href="https://www.youtube.com/watch?v=RuZglxY4EuM" className="glightbox play-btn mb-4"></a> */}
         </div>
         <div className="col-lg-6 pt-3 pt-lg-0 content">
           <h3>Check Out This Video to See How it Works!</h3>
@@ -64,20 +66,20 @@ const About = ({pot, date}) => {
 
 
 export default function Home() {
-  function getPreviousSunday() {
+  function getPreviousFriday() {
     const today = new Date();
     const dayOfWeek = today.getDay();
-    const daysToSunday = dayOfWeek === 0 ? 7 : dayOfWeek;
+    const daysToFriday = dayOfWeek >= 5 ? dayOfWeek - 5 : dayOfWeek + 2;
     const millisecondsInDay = 24 * 60 * 60 * 1000;
   
-    const previousSunday = new Date(today.getTime() - (daysToSunday * millisecondsInDay));
-    previousSunday.setHours(11, 59, 0, 0);
+    const previousFriday = new Date(today.getTime() - (daysToFriday * millisecondsInDay));
+    previousFriday.setHours(16, 59, 0, 0);
   
-    return previousSunday;
+    return previousFriday;
   }
 
   const [pot, setPot] = useState(0);
-  const [date, setDate] = useState(getPreviousSunday());
+  const [date, setDate] = useState(getPreviousFriday());
   const { authInfo } = useAuth();
   const {isLoggedIn} = authInfo;
   const isVerified = authInfo.profile?.isVerified;
@@ -89,21 +91,25 @@ export default function Home() {
     const {error, scholarship} = await getCurrentPot();
     if (error) return updateNotification("error", error);
     const dateStarted = new Date(scholarship.dateStarted); // Convert to valid date format
-    if(scholarship.pot !== undefined) {
-      setPot(scholarship.pot);
-    }
-    if(dateStarted !== undefined) {
-      setDate(dateStarted);
-    }
-  
+    // if(scholarship.pot !== undefined) {
+    //   setPot(scholarship.pot);
+    // }
+    // if(dateStarted !== undefined) {
+    //   setDate(dateStarted);
+    // }
+    
+    setDate(dateStarted);
+    setPot(scholarship.pot);
   }
   useEffect( () => {
-     
-       fetchPot();
+      fetchPot();
   }, [])
+ 
+
   
   return (<>
-     <NotVerified />
+     <NotVerified />   
+    
       <Hero />
 
 

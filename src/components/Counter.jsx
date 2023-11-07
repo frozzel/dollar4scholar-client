@@ -2,8 +2,9 @@
 import { useState, useEffect } from 'react';
 import PureCounter from "@srexi/purecounterjs";
 
-
 const CountdownTimer = ({ size, pot, date }) => {
+
+
   
   const calculateTimeLeft = () => {
     const now = new Date();
@@ -27,6 +28,8 @@ const CountdownTimer = ({ size, pot, date }) => {
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
@@ -46,10 +49,8 @@ const CountdownTimer = ({ size, pot, date }) => {
   }, [timeLeft]);
 
   useEffect(() => {
-    if(isNaN(timeLeft.days)) {
-    return;
-    }
-    new PureCounter();
+    if(isNaN(timeLeft.days)) return; 
+    new PureCounter() 
   }, [timeLeft]);
 
   return (
