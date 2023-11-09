@@ -1,5 +1,4 @@
 import ImageGallery from "react-image-gallery";
-// import stylesheet if you're not already using CSS @import
 import "react-image-gallery/styles/css/image-gallery.css";
 import girl1 from "../../assets/img/blog/blog-recent-1.jpg"
 import girl2 from "../../assets/img/blog/blog-recent-2.jpg"
@@ -37,21 +36,21 @@ const images = [
   },
 ];
 
-// class MyGallery extends React.Component {
-//   render() {
-//     return <ImageGallery items={images} />;
-//   }
-// }
-
 export default function MyGallery() {
     const falseValue = false;
     const trueValue = true;
-    return <ImageGallery items={images} 
+   
+
+    return (
+    
+    <ImageGallery items={images} 
     showNav={falseValue} 
     showThumbnails={falseValue} 
     showFullscreenButton={falseValue}  
     showPlayButton={falseValue}
     showBullets={trueValue}
     autoPlay={trueValue}
-    />;
+    />
+   
+    );
     }
