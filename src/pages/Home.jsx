@@ -33,7 +33,7 @@ const About = ({pot, date}) => {
     <CountdownTimer size={"col-lg-6"} pot={pot} date={date}  />
 
       <div className="row">
-        <div className="col-lg-6 video-box align-self-baseline position-relative">
+        <div className="col-lg-6 video-box align-self-baseline position-relative" >
         <Gallery />
           {/* <img src={videoPlaceHolder } className="img-fluid" alt="" />
           <a href="https://www.youtube.com/watch?v=RuZglxY4EuM" className="glightbox play-btn mb-4"></a> */}
@@ -50,6 +50,8 @@ const About = ({pot, date}) => {
             <li><i className="bx bx-check-double"></i>The earning of the week will be raffled off through a randomized system to generate a winner.</li>
               <li><i className="bx bx-check-double"></i>The winners name will then appear on the site with a “Congratulations, you’re this week’s
               WINNER!!!”</li>
+              <li><i className="bx bx-check-double"></i>The earning of the week will be raffled off through a randomized system to generate a winner.</li>
+              <li><i className="bx bx-check-double"></i>Keep an eye out for your emails! You may have the luck of the draw.</li>
             {/* Add more list items as needed */}
           </ul>
           <p>

@@ -1,6 +1,6 @@
 // Note: Hero component for Home page
 import { useEffect } from 'react';
-import backgroundImage from '../../assets/img/AdobeStock_591753369_Video_Hd_Preview.mp4';
+import backgroundImage from '../../assets/img/AdobeStock_591753369.mp4';
 import AOS from 'aos';
 import { useAuth } from "../../hooks";
 
@@ -17,7 +17,7 @@ export default function Hero() {
   return (<>
     <section id="hero" 
     // style={{ 
-    //   backgroundImage: `url(${backgroundImage})` 
+    //   marginTop: "100px", 
     // }}
     >
       
