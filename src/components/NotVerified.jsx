@@ -17,7 +17,7 @@ export default function NotVerified() {
   return (
     <Container className='bg-warning notV'>
       {isLoggedIn && !isVerified ? 
-      <p className='text-lg text-center  p-2 mt-5'>It looks like you haven't verified your account, {""} 
+      <p className='text-lg text-center  p-2 mt-5'>It looks like you haven't verified your account, Or need to log back in {""} 
       <Button onClick={navigateToVerification} className='text-blue-500 font-semibold hover:underline getstarted3' variant="outline-*">Click here to verify your Account</Button>
       </p> : null}
     </Container>

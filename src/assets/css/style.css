@@ -557,7 +557,7 @@ input[type=number] {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 75vh;
+  height: 50vh;
   background: url("../img/AdobeStock_591753369_Video_HD_Preview.mp4") top center;
   background-size: cover;
   position: relative;
