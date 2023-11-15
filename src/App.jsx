@@ -9,8 +9,8 @@ import EmailVerification from "./auth/EmailVerification.jsx";
 import NotFound from "./pages/NotFound";
 import ForgetPassword from "./auth/ForgetPassword";
 import ConfirmPassword from "./auth/ConfirmPassword";
-import Collegesnuniversities from "./pages/Collegesnuniversities";
-import Investors from "./pages/Investors";
+// import Collegesnuniversities from "./pages/Collegesnuniversities";
+// import Investors from "./pages/Investors";
 import About from "./pages/About";
 import Donor from "./pages/Donor";
 import Student from "./pages/Student";
@@ -37,8 +37,8 @@ function App() {
         <Route path='*' element={<NotFound/>} />
         <Route path='/auth/forget-Password' element={<ForgetPassword/>} />
         <Route path='/auth/reset-password' element={<ConfirmPassword/>} />
-        <Route path='/Collegesnuniversities' element={<Collegesnuniversities/>} />
-        <Route path='/Investors' element={<Investors/>} />
+        {/* <Route path='/Collegesnuniversities' element={<Collegesnuniversities/>} />
+        <Route path='/Investors' element={<Investors/>} /> */}
         <Route path='/About' element={<About />} />
         <Route path='/Donor' element={<Donor/>} />
         <Route path='/Student' element={<Student/>} />
