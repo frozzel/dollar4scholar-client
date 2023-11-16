@@ -21,3 +21,4 @@ https://mdbootstrap.com/docs/standard/extended/profiles/#section-3
 
  "@vitejs/plugin-react-swc": "^3.3.2",
   "start": "npm install -g serve && serve -s build ",
+  index_document: index.html //add to App Spec in Digital Ocean // catchall_document: index.html
