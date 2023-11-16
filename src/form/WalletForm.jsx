@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { ImSpinner3 } from "react-icons/im";
 import { Button } from "react-bootstrap";
-import StripeCheckout from "react-stripe-checkout";
 
-
-const defaultUserInfo = {
-  name: "",
-  wallet: "",
-};
 
 export default function WalletForm({
   title,
@@ -38,13 +32,13 @@ export default function WalletForm({
         if (key) formData.append(key, userInfo[key]);
     }
     const walletValue = parseFloat(userInfo.wallet); // Convert wallet value to a number
-    const jsonPayload = { wallet: walletValue }; // Create JSON object
+    // const jsonPayload = { wallet: walletValue }; // Create JSON object
 
     // onSubmit(jsonPayload); // Submit the JSON object
 
      // Redirect to checkout page with query parameters
   const queryString = `?cusRef=${initialState.stripeId}&id=${initialState.id}&amount=${userInfo.wallet}&email=${initialState.email}`;
-  window.location.href = `http://localhost:5173/checkout${queryString}`;
+  window.location.href = `${import.meta.env.VITE_DOMAIN}/checkout${queryString}`;
   };
 
   return (
