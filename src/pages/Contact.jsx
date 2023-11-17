@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import {useEffect, useRef} from 'react';
 import AOS from 'aos';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
@@ -43,7 +43,7 @@ const ContactSection = () => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.sendForm('service_7id53gb', 'template_jnslxz5', form.current, '9-U_xZJNUduY3ojDx')
+        emailjs.sendForm('service_hc1t7zl', 'template_wghej7b', form.current, 'd_hOlhDk21qDuuh2U')
         .then(
             (result) => {
             updateNotification("ok", result.text)
