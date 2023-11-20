@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import  videoPlaceHolder from '../../assets/img/webpic.png'
+// import  videoPlaceHolder from '../../assets/img/webpic.png'
 import GLightbox from 'glightbox';
 import CountdownTimer from '../../components/Counter.jsx';
 import { Container } from 'react-bootstrap';
@@ -46,7 +46,7 @@ const AboutSection = ({pot, date, message}) => {
             <li><i className="bx bx-check-double"></i>The earning of the week will be raffled off through a randomized system to generate a winner.</li>
               <li><i className="bx bx-check-double"></i>The winners name will then appear on the site with a “Congratulations, you’re this week’s
               WINNER!!!”</li>
-              <li><i className="bx bx-check-double"></i>The earning of the week will be raffled off through a randomized system to generate a winner.</li>
+              {/* <li><i className="bx bx-check-double"></i>The earning of the week will be raffled off through a randomized system to generate a winner.</li> */}
               <li><i className="bx bx-check-double"></i>Keep an eye out for your emails! You may have the luck of the draw.</li>
             {/* Add more list items as needed */}
           </ul>
