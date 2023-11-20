@@ -11,7 +11,7 @@ import { getSessionData } from "../api/scholarship";
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
 // This is your test public API key.
-const stripePromise = loadStripe("pk_test_51O5rZwDJqC99h37UQJhl03wcFWHOb46p3x4mnXZ8bmDQX7fCTLYcKB9YbL6yoR6aZFIgHl9ndAU9FVjaX2hNDJX900DwIGs0aI");
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 const CheckoutForm = () => {
     const [cusId, setCusId] = useState('');

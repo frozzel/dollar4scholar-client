@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import { useEffect, useState} from "react";
 import Title from "../form/Title";
 import FormInput from "../form/FormInput";
 import Submit from "../form/Submit";
