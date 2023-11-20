@@ -1,11 +1,11 @@
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import girl1 from "../../assets/img/blog/blog-recent-1.jpg"
-import girl2 from "../../assets/img/blog/blog-recent-2.jpg"
-import girl3 from "../../assets/img/blog/blog-recent-3.jpg"
-import girl4 from "../../assets/img/blog/blog-recent-4.jpg"
-import girl5 from "../../assets/img/blog/blog-recent-5.jpg"
-import girl6 from "../../assets/img/blog/blog-1.jpg"
+import girl1 from "../../assets/img/blog/blog-recent-6.jpg"
+import girl2 from "../../assets/img/blog/blog-recent-7.jpg"
+import girl3 from "../../assets/img/blog/blog-recent-8.jpg"
+import girl4 from "../../assets/img/blog/blog-recent-9.jpg"
+import girl5 from "../../assets/img/blog/blog-recent-10.jpg"
+import girl6 from "../../assets/img/blog/blog-recent-2.jpg"
 
 
 
