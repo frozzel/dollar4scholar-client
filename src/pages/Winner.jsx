@@ -5,7 +5,7 @@ import Confetti from 'react-confetti'
 import { getWinner } from '../api/scholarship';
 import './winner.css'
 import { getCurrentPot } from '../api/scholarship';
-import CountdownTimer2 from '../components/Counter2.jsx';
+import CountdownTimer2 from '../components/Counter3.jsx';
 import gooffy from '../assets/img/profile.jpeg';
 
 

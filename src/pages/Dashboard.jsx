@@ -10,7 +10,7 @@ import UserUpload from "../components/UserUpload";
 import UserWallet from '../components/UserWallet';
 import AOS from 'aos';
 import DonorDashboard from './DonorDash';
-import Counter from '../components/Counter';
+import Counter from '../components/Counter3';
 import UserBuyIn from '../components/UserBuyIn';
 import AdminDash from './AdminDash';
 import gooffy from '../assets/img/profile.jpeg';
