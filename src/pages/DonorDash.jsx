@@ -11,7 +11,7 @@ import UserWallet from '../components/UserWallet';
 import AOS from 'aos';
 import logo from '../assets/img/clients/client-1.png';
 import UserDonate from '../components/UserDonate';
-import Counter from '../components/Counter';
+import Counter from '../components/Counter3';
 
 
 
