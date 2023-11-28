@@ -51,7 +51,7 @@ const AboutSection = ({pot, date, message}) => {
             {/* Add more list items as needed */}
           </ul>
           <p>
-          This Lottery is open for College and University student Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw.
+          This Lottery is open for College and University students Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw.
           </p>
         </div>
       </div>

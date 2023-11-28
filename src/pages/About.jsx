@@ -51,7 +51,7 @@ const WorkProcessSection = () => {
       <div className="container">
         <div className="section-title" data-aos="fade-right">
           <h2>Work Process</h2>
-          <p>This Lottery is open for College and University student Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw.</p>
+          <p>This Lottery is open for College and University students Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw.</p>
         </div>
 
         <div className="row content">
@@ -89,9 +89,11 @@ const WorkProcessSection = () => {
           <div className="col-md-7 pt-5" data-aos="fade-left" style={{marginTop: '99px'}}>
             <h3>Enter to win!!!</h3>
             <ul>
-              <li><i className="bi bi-check"></i> Test your luck at the Drawing</li>
-              <li><i className="bi bi-check"></i> Enter your Dollar you Scholar</li>
-              <li><i className="bi bi-check"></i> Wait for an email confirmation of your submission.</li>
+              <li><i className="bx bx-check-double"></i> Test your luck at the Drawing</li>
+              <li><i className="bx bx-check-double"></i> Load your wallet</li>
+              <li><i className="bx bx-check-double"></i> Enter this weeks drawing</li>
+              <li><i className="bx bx-check-double"></i> Minimum to participate is $1</li>
+              <li><i className="bx bx-check-double"></i> Wait for an email confirmation of your submission.</li>
             </ul>
           </div>
         </div>
