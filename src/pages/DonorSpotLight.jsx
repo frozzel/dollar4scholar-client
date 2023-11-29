@@ -1,6 +1,7 @@
-import React, { useEffect, useState} from 'react';
+import { useEffect, useState} from 'react';
 import { getDonations } from '../api/scholarship';
 import AOS from 'aos';
+import { useNotification } from "../hooks";
 
 
 
@@ -57,10 +58,14 @@ const Member = ({ name, date, amount, phone, address, imageSrc }) => {
 
   const TeamSection = () => {
     const [donations, setDonations] = useState([]);
+    const { updateNotification } = useNotification();
+    const {notification} = useNotification();
+    const [message, setMessage] = useState("");
 
     const fetchDonations = async () => {
         const {error, donations} = await getDonations();
         if (error) return updateNotification("error", error);
+        if (donations && donations.length == 0) return updateNotification("error", "No donations found");
         setDonations(donations);
         }
 
@@ -68,11 +73,16 @@ const Member = ({ name, date, amount, phone, address, imageSrc }) => {
     useEffect( () => {
             fetchDonations();
     }, [])
+    useEffect(() => {
+      setMessage(notification)
+  } , [notification])
     
     return (
         
-      <section id="team" className="team" style={{ backgroundColor: '#eee' }}>
+      <section id="team" className="team" style={{ backgroundColor: '#eee' , height: "80vh"}}>
     <div className="container py-3" data-aos="fade-up"></div>
+    <div className="text-danger text-center">{message}</div>
+
         <div className="container">
         <div className="row">
           <div className="col">
@@ -105,9 +115,9 @@ const Member = ({ name, date, amount, phone, address, imageSrc }) => {
 
 
 
-const DonorSpotLight = ({pot}) => {
+const DonorSpotLight = () => {
   return (
-    <main id="main">
+    <main id="main" >
       <Breadcrumbs />
       <TeamSection />
     </main>
