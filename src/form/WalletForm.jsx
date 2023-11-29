@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ImSpinner3 } from "react-icons/im";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 export default function WalletForm({
@@ -69,17 +70,31 @@ export default function WalletForm({
           />
         </div>
       </div>
+     
       <hr />
-      <div className="d-flex justify-content-end align-items-center ">
-      <Button
+      <div className="d-flex justify-content-center align-items-center " style={{fontSize: 12, color: "red"}}>Coming Soon! </div>
+      
+      {/* <div className="d-flex justify-content-end align-items-center "> */}
+      <div className="d-flex justify-content-center align-items-center ">
+        
+      {/* <Button
           className="getstarted2"
           type="submit"
           variant="outline-*"
         >
           {busy ? <ImSpinner3 className="spinner-border" /> : btnTitle}
 
-        </Button>
+        </Button> */}
+
+          <Button variant="outline-*" target="_blank" href="https://www.skrill.com/en-us/business/integration/" >
+
+          <img alt="Pay by Skrill purple button 245x75 PNG" src="https://www.skrill.com/fileadmin/content/images/brand_centre/Pay_by_Skrill/skrill-payby-btn-purple_245x75.png" width="245" height="75" />
+
+          </Button>
+
+
         </div>
+        <div className="d-flex justify-content-center align-items-center " style={{fontSize: 9, color: "red"}}>We are changing are payment provider please wait while we update our system!</div>
 
     </form>
     
