@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { updateUserWallet } from "../api/user";
 import { useNotification } from "../hooks";
 import WalletForm from "../form/WalletForm";
