@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useNotification } from "../hooks";
 import { getDonations, getAllWinners, getNumberOfUsers } from '../api/scholarship';
 import AOS from 'aos';
-import Counter from '../components/Counter3';
+import Counter from '../components/Counter';
 import {CgProfile} from "react-icons/cg";
 import {FaUserGraduate} from "react-icons/fa";
 import {BsCoin} from "react-icons/bs";

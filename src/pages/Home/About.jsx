@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 // import  videoPlaceHolder from '../../assets/img/webpic.png'
 import GLightbox from 'glightbox';
-import CountdownTimer from '../../components/Counter3.jsx';
+import CountdownTimer from '../../components/Counter2.jsx';
 import { Container } from 'react-bootstrap';
 import AOS from 'aos';
 import Gallery from './Gallary.jsx';
