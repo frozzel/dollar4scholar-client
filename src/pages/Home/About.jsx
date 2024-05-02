@@ -35,26 +35,43 @@ const AboutSection = ({pot, date, message}) => {
           <a href="https://www.youtube.com/watch?v=RuZglxY4EuM" className="glightbox play-btn mb-4"></a> */}
         </div>
         <div className="col-lg-6 pt-3 pt-lg-0 content">
-          <h3>Check This Out to See How it Works!</h3>
+          <h4>🎓 Who We Are</h4>
+          <h5></h5>
           <p className="fst-italic">
-          The University lottery will provide scholarship opportunities for students currently enrolled
-              in an accredited college or University.
+          We're a community built by students, for students—envisioned by a college professor and brought to life by students just like you. Our mission is to provide easy, accessible scholarships to support your educational journey, whether you're a high school senior, a university student, or attending trade school. No hurdles, just help!
           </p>
+          <p>🤝 Join Our Community</p>
           <ul>
-            <li><i className="bx bx-check-double"></i>The way to enter to win the weekly raffle is by submitting
-              a payment of $1 along with school credentials and an email address to be entered the lottery.</li>
-            <li><i className="bx bx-check-double"></i>The earning of the week will be raffled off through a randomized system to generate a winner.</li>
-              <li><i className="bx bx-check-double"></i>The winners name will then appear on the site with a “Congratulations, you’re this week’s
-              WINNER!!!”</li>
+            <li><i className="bx bx-check-double"></i>Ready to get started? Joining is as simple as it gets:</li>
+            <li><i className="bx bx-check-double"></i>Sign Up: Quickly create your profile with just a few clicks.</li>
+              {/* <li><i className="bx bx-check-double"></i>Join the Community: Connect with fellow students—all driven to support each other’s educational dreams.</li> */}
               {/* <li><i className="bx bx-check-double"></i>The earning of the week will be raffled off through a randomized system to generate a winner.</li> */}
-              <li><i className="bx bx-check-double"></i>Keep an eye out for your emails! You may have the luck of the draw.</li>
+              {/* <li><i className="bx bx-check-double"></i>Keep an eye out for your emails! You may have the luck of the draw.</li> */}
             {/* Add more list items as needed */}
           </ul>
+          <p> 🚀 How It Works</p>
           <p>
-          This Lottery is open for College and University students Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw.
+         Every month, we pool together subscriptions from our community to fund scholarships that are truly for the students, by the students. And the best part? There are no GPA requirements, essays, or applications. Your participation is your ticket to potential scholarship awards!
           </p>
+        
         </div>
       </div>
+      <div className="row mt-3">
+        <div className="col-lg-12 pt-3 pt-lg-0 content">
+        <p>🌟 Why Us?</p>
+          <ul>
+            <li><i className='bx bx-check-double'></i>Don’t miss out on your chance to be part of a unique scholarship community. Sign up, create your profile, and see how simple and rewarding giving and receiving support can be!</li>
+          </ul>
+          <p>✨ Sign Up Today</p>
+          <ul>
+            <li><i className='bx bx-check-double'></i>Why get bogged down by endless requirements when you can focus on what really matters—your education and future? With us, it’s not about fitting a mold; it’s about giving every student a fair chance at financial support.</li>
+            <li><i className='bx bx-check-double'></i>Feel free to adjust the wording or add any additional elements you think might be needed. If there’s anything else you’d like to refine or add, just let me know!</li>
+          </ul>
+
+
+          </div>
+
+        </div>
     </Container>
   </section>
   </>

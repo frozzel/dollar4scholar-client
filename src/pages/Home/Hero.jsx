@@ -27,12 +27,13 @@ export default function Hero() {
         </video>
         </div>
         <div className="hero-container" data-aos="fade-up">
-          <h1>Add a Play To Your Financial Aid!</h1>
+        
+          <h1 className='mt-5'>Scholarships Made Simple!</h1>
           <form action="" method="post">
             {/* <input type="email" placeholder="Student Email" name="email" /> */}
-            <a href={"/dashboard/"+ userId} className="btn-get-started2 scrollto">Enter to win this week’s pot!</a>
+            <a href={"/dashboard/"+ userId} className="btn-get-started2 scrollto">Join this months scholarship program!</a>
           </form>
-          <a href={"/dashboard/"+ userId} className="btn-get-started scrollto">Donate to the pot!</a>
+          {/* <a href={"/dashboard/"+ userId} className="btn-get-started mb-3 scrollto">Donate to the Scholarship!</a> */}
         </div>
    
       </section>
@@ -52,12 +53,12 @@ export default function Hero() {
         </video>
         </div>
         <div className="hero-container" data-aos="fade-up">
-          <h1>Add a Play To Your Financial Aid!</h1>
+          <h1 className='mt-5'>Scholarships Made Simple!</h1>
           <form action="" method="post">
             {/* <input type="email" placeholder="Student Email" name="email" /> */}
-            <a href={"/auth/signIn"} className="btn-get-started2 scrollto">Enter to win this week’s pot!</a>
+            <a href={"/auth/signIn"} className="btn-get-started2 scrollto">Enter to win this months scholarship!</a>
           </form>
-          <a href={"/auth/signIn"} className="btn-get-started scrollto">Donate to the pot!</a>
+          {/* <a href={"/auth/signIn"} className="btn-get-started scrollto">Donate to the Scholarship!</a> */}
         </div>
    
       </section>

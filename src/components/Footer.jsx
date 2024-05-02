@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="copyright" style={{padding: "1rem"}}>
         &copy; Copyright 2023 - <strong><span>Dollar4Scholar</span></strong>. All Rights Reserved
         <div>
-          <small >* Pot Total before 15% tax and site fees</small>
+          <small >* Scholarship Total before 15% tax and site fees</small>
 
         </div>
       </div>
