@@ -47,7 +47,7 @@ export default function Hero() {
     // }}
     >
       
-        <div className="hero-container" data-aos="fade-up">
+        <div className="hero-container mt-3 mb-3" data-aos="fade-up">
         <video  muted  loop autoPlay  >
           <source src={backgroundImage} type="video/mp4" />
         </video>
@@ -56,7 +56,7 @@ export default function Hero() {
           <h1 className='mt-5'>Scholarships Made Simple!</h1>
           <form action="" method="post">
             {/* <input type="email" placeholder="Student Email" name="email" /> */}
-            <a href={"/auth/signIn"} className="btn-get-started2 scrollto">Enter to win this months scholarship!</a>
+            <a href={"/auth/signIn"} className="btn-get-started2 scrollto">Join this months scholarship program!</a>
           </form>
           {/* <a href={"/auth/signIn"} className="btn-get-started scrollto">Donate to the Scholarship!</a> */}
         </div>
