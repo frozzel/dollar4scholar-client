@@ -7,6 +7,9 @@ import mh from '../assets/img/work-process-3.png';
 import { getCurrentPot } from '../api/scholarship';
 import AboutSection from './Home/About.jsx';
 import { useNotification } from "../hooks";
+import { Button, Container } from 'react-bootstrap';
+
+
 
 
 
@@ -50,8 +53,8 @@ const WorkProcessSection = () => {
     <section id="work-process" className="work-process" >
       <div className="container">
         <div className="section-title" data-aos="fade-right">
-          <h2>Work Process</h2>
-          <p>This Lottery is open for College and University students Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw.</p>
+          <h2>How It Works</h2>
+          <h3>Joining Our Scholarship Community Is As Easy As 1-2-3!</h3>
         </div>
 
         <div className="row content">
@@ -60,14 +63,17 @@ const WorkProcessSection = () => {
           </div>
           <div className="col-md-7 pt-4 " data-aos="fade-left" style={{marginTop: '99px'}}>
             <div className="fst-italic " style={{display: "inline-block"}}>
-                <h3>Enter Student Email</h3>
+                <h3>Step 1: Sign Up</h3>
               <ul>
-                <li><i className="bx bx-check-double"></i> The email address must be from an accredited College or University ending in .edu to be accepted into the drawing.</li>
-                <li><i className="bx bx-check-double"></i> Participants must be enrolled in an Accredited College or University</li>
-                <li><i className="bx bx-check-double"></i> Participants must have access to this email address</li>
-                <li><i className="bx bx-check-double"></i> New Student Fresh may enter without .edu but will need to provide school information for payment</li>
+                <li><i className="bx bx-check-double"></i><strong>Create Your Profile:</strong><br></br> Start by signing up on our website. All you need is some basic information to create your profile. It’s quick and easy!</li>
+                <li><i className="bx bx-check-double"></i><strong>Customize Your Experience: </strong><br></br>Tell us a bit about your educational goals and interests. This helps us tailor your experience and keep you informed about scholarship opportunities that might interest you.</li>
+                {/* <li><i className="bx bx-check-double"></i> Participants must have access to this email address</li>
+                <li><i className="bx bx-check-double"></i> New Student Fresh may enter without .edu but will need to provide school information for payment</li> */}
 
               </ul>
+                 <div className="text-center">
+                  <Button type='button' href="/auth/signIn" className="  getstarted3 scrollto center">Sign Up Today!</Button>
+                </div>
             </div>
           </div>
         </div>
@@ -77,8 +83,12 @@ const WorkProcessSection = () => {
             <img src={columbia} className="img-fluid" alt=""/>
           </div>
           <div className="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right" style={{marginTop: '99px'}}>
-            <h3>Create Student Profile</h3>
-            <p>The University Lottery will provide scholarship opportunities for students currently enrolled in an accredited college or University. The way to enter to win the weekly raffle is by submitting a payment of $1 along with school credentials and an email address to be entered the lottery. The earning of the week will be raffled off through a randomized system to generate a winner. The winners name will then appear on the site with a “Congratulations, you’re this week’s WINNER!!!” </p>
+            <h3>Step 2: Explore Scholarships</h3>
+            <ul>
+            <li><i className="bx bx-check-double"></i><strong>Automatic Enrollment:</strong><br></br> Once you subscribe, you're automatically considered for all upcoming scholarships. No need to apply for each one separately!</li>
+                <li><i className="bx bx-check-double"></i><strong>Monthly Scholarships:</strong><br></br> New scholarship opportunities are available every month. Stay active and check back often to see what’s new!</li>
+          
+              </ul>
           </div>
         </div>
 
@@ -87,14 +97,14 @@ const WorkProcessSection = () => {
             <img src={mh} className="img-fluid" alt="" style={{width: "80%", transform: "scaleX(-1)"}}/>
           </div>
           <div className="col-md-7 pt-5" data-aos="fade-left" style={{marginTop: '99px'}}>
-            <h3>Enter to win!!!</h3>
-            <ul>
-              <li><i className="bx bx-check-double"></i> Test your luck at the Drawing</li>
-              <li><i className="bx bx-check-double"></i> Load your wallet</li>
-              <li><i className="bx bx-check-double"></i> Enter this weeks drawing</li>
-              <li><i className="bx bx-check-double"></i> Minimum to participate is $1</li>
-              <li><i className="bx bx-check-double"></i> Wait for an email confirmation of your submission.</li>
-            </ul>
+            <h3>Step 3: Support and Be Supported</h3>
+            <br />
+            <h5><strong>Community Engagement:</strong> Our platform is more than just scholarships; it’s a community. Engage with other students, share experiences, and support each other.</h5>
+            <br />
+            <h3>Step 4: Scholarship Selection</h3>
+            <br />
+            <h5><strong>Random Draws: </strong>  Scholarships are awarded through a random draw system, ensuring fairness. Notification: Winners are notified via email each month. Make sure to keep your contact information up to date!</h5>
+
           </div>
         </div>
 
@@ -103,24 +113,30 @@ const WorkProcessSection = () => {
             <img src={cau} className="img-fluid" alt=""/>
           </div>
           <div className="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
-            <h3>Check for the Winner</h3>
-            <p className="fst-italic">
-              The Winner will appear on the site every Friday at 5:00 PM! 
-            </p>
+            <h3>Step 5: Receive Your Scholarship</h3>
             <div>
                 <ul>
-                    <li><i className="bx bx-check-double"></i> Check your email to see if you were this weeks lucky winner</li>
-                    <li><i className="bx bx-check-double"></i> Congratulations to our Winner!!!</li>
-                    <li><i className="bx bx-check-double"></i> If you were not this weeks lucky winner, try your hand for next week!!!</li>
-                    <li><i className="bx bx-check-double"></i> Check-out our scholarship page for government funded scholarships!</li>
-                    <li><i className="bx bx-check-double"></i> Lets Find a Way or Make one for your academic aspirations to become reality</li>
-                    <li><i className="bx bx-check-double"></i> The only way to lose is to stop trying, Try Again! </li>
+                    <li><i className="bx bx-check-double"></i><strong>Quick and Easy Transfer:</strong><br></br> Scholarships are transferred directly to your school/university.</li>
+                    <li><i className="bx bx-check-double"></i><strong> No Strings Attached: </strong><br></br>Use your scholarship for tuition, books, or other educational expenses. It's your choice!</li>
+                    <br />
+                    <h3>Community Funded, Community Focused</h3>
+                    <li><i className="bx bx-check-double"></i> <strong>Funding:</strong> Each scholarship is funded by the collective contributions of our student subscribers. Your minimal subscription not only supports your own chances but also helps other students achieve their educational dreams.</li>
+                    <li><i className="bx bx-check-double"></i> <strong>Transparency: </strong>We provide complete transparency about how funds are used and scholarships are awarded. Trust and transparency are at the core of our community.</li>
+                 
                   </ul>
-                  <h3>You Got This!!!</h3>
+                  {/* <h3>You Got This!!!</h3> */}
             </div>
           </div>
           
         </div>
+         <div className="row content">
+          <h3 className="text-center">Join Us Today!</h3>
+          <h5 className='text-center'>Experience a new way of earning scholarships where your involvement truly counts. Sign up, become a part of our supportive community, and take one step closer to your educational goals with less financial burden.</h5>
+          <br />
+          <div className="text-center">
+            <Button type='button' href="/auth/signIn" className="btn  getstarted3 scrollto center">Sign Up Today!</Button>
+          </div>
+          </div>
       </div>
     </section>
   );
