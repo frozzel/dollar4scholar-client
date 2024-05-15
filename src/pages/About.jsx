@@ -71,6 +71,12 @@ const WorkProcessSection = () => {
                 <li><i className="bx bx-check-double"></i> New Student Fresh may enter without .edu but will need to provide school information for payment</li> */}
 
               </ul>
+              <h3>Step 2: Explore Scholarships</h3>
+            <ul>
+            <li><i className="bx bx-check-double"></i><strong>Automatic Enrollment:</strong><br></br> Once you subscribe, you're automatically considered for all upcoming scholarships. No need to apply for each one separately!</li>
+                <li><i className="bx bx-check-double"></i><strong>Monthly Scholarships:</strong><br></br> New scholarship opportunities are available every month. Stay active and check back often to see what’s new!</li>
+          
+              </ul>
                  <div className="text-center">
                   <Button type='button' href="/auth/signIn" className="  getstarted3 scrollto center">Sign Up Today!</Button>
                 </div>
@@ -83,20 +89,12 @@ const WorkProcessSection = () => {
             <img src={columbia} className="img-fluid" alt=""/>
           </div>
           <div className="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right" style={{marginTop: '99px'}}>
-            <h3>Step 2: Explore Scholarships</h3>
+            {/* <h3>Step 2: Explore Scholarships</h3>
             <ul>
             <li><i className="bx bx-check-double"></i><strong>Automatic Enrollment:</strong><br></br> Once you subscribe, you're automatically considered for all upcoming scholarships. No need to apply for each one separately!</li>
                 <li><i className="bx bx-check-double"></i><strong>Monthly Scholarships:</strong><br></br> New scholarship opportunities are available every month. Stay active and check back often to see what’s new!</li>
           
-              </ul>
-          </div>
-        </div>
-
-        <div className="row content">
-          <div className="col-md-5" data-aos="fade-right">
-            <img src={mh} className="img-fluid" alt="" style={{width: "80%", transform: "scaleX(-1)"}}/>
-          </div>
-          <div className="col-md-7 pt-5" data-aos="fade-left" style={{marginTop: '99px'}}>
+              </ul> */}
             <h3>Step 3: Support and Be Supported</h3>
             <br />
             <h5><strong>Community Engagement:</strong> Our platform is more than just scholarships; it’s a community. Engage with other students, share experiences, and support each other.</h5>
@@ -109,20 +107,48 @@ const WorkProcessSection = () => {
         </div>
 
         <div className="row content">
+          <div className="col-md-5" data-aos="fade-right">
+            <img src={mh} className="img-fluid" alt="" style={{width: "80%", transform: "scaleX(-1)"}}/>
+          </div>
+          <div className="col-md-7 pt-5" data-aos="fade-left" style={{marginTop: '99px'}}>
+          <h3>Step 5: Receive Your Scholarship</h3>
+          <br />
+          <ul>
+                    <li><i className="bx bx-check-double"></i><strong>Quick and Easy Transfer:</strong><br></br> Scholarships are transferred directly to your school/university.</li>
+                    <li><i className="bx bx-check-double"></i><strong> No Strings Attached: </strong><br></br>Use your scholarship for tuition, books, or other educational expenses. It's your choice!</li>
+                    <br />
+                    </ul>
+          </div>
+        </div>
+
+        <div className="row content">
           <div className="col-md-5 order-1 order-md-2" data-aos="fade-left">
             <img src={cau} className="img-fluid" alt=""/>
           </div>
           <div className="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
-            <h3>Step 5: Receive Your Scholarship</h3>
+            
             <div>
                 <ul>
-                    <li><i className="bx bx-check-double"></i><strong>Quick and Easy Transfer:</strong><br></br> Scholarships are transferred directly to your school/university.</li>
-                    <li><i className="bx bx-check-double"></i><strong> No Strings Attached: </strong><br></br>Use your scholarship for tuition, books, or other educational expenses. It's your choice!</li>
-                    <br />
+                    
                     <h3>Community Funded, Community Focused</h3>
                     <li><i className="bx bx-check-double"></i> <strong>Funding:</strong> Each scholarship is funded by the collective contributions of our student subscribers. Your minimal subscription not only supports your own chances but also helps other students achieve their educational dreams.</li>
-                    <li><i className="bx bx-check-double"></i> <strong>Transparency: </strong>We provide complete transparency about how funds are used and scholarships are awarded. Trust and transparency are at the core of our community.</li>
-                 
+                    <li><i className='bx bx-check-double'></i><strong>Growing with Every Subscriber: </strong>As more students join our community by subscribing, the scholarship fund grows. This increase allows us to offer larger awards and grant more scholarships each month. With sustained growth and support from our community:</li>
+                    <li><i className='bx bx-check-double'></i><strong>More frequent scholarships: </strong>Based on the rate of new subscriptions and overall community support, we aim to increase the frequency of awards from monthly to potentially weekly.</li>
+                    <br />
+                    <li>This model ensures that our scholarships are sustainably funded by students for students, fostering a supportive community that helps make education more accessible to everyone.</li>
+                    <br />
+
+                    <h3>Our Scholarship Funding Model</h3>
+                    <br />
+                    <li> <strong>Transparency: Affordable Subscription: Only $2.79 per Month </strong></li>
+                    <li>We provide complete transparency about how funds are used and scholarships are awarded. Trust and transparency are at the core of our community.</li>
+                    <li>Our scholarships are uniquely funded through a small monthly subscription of just $2.79. Here’s how each subscription is allocated:</li>
+
+                    <ul>
+                      <li><i className="bx bx-check-double"></i><strong>$1.50 goes directly to the scholarship fund: </strong>This portion is pooled together to create the scholarships awarded to students like you.</li>
+                      <li><i className="bx bx-check-double"></i><strong>$1.29 covers the operational costs: </strong>This helps maintain our website and supports the development of our upcoming mobile app, ensuring a seamless experience for all users.</li>
+                    </ul>
+
                   </ul>
                   {/* <h3>You Got This!!!</h3> */}
             </div>
