@@ -11,7 +11,7 @@ import UserWallet from '../components/UserWallet';
 import AOS from 'aos';
 import logo from '../assets/img/clients/client-1.png';
 import UserDonate from '../components/UserDonate';
-import Counter from '../components/Counter';
+import Counter from '../components/Counter2';
 
 
 
@@ -200,7 +200,7 @@ const DonorDashboard = ({pot, date}) => {
             <nav aria-label="breadcrumb" className="bg-light rounded-3 p-3 mb-4">
               <ol className="breadcrumb mb-0">
                 <li className="breadcrumb-item"><a href="/">Home</a></li>
-                <li className="breadcrumb-item active"><a aria-current="page">Dashboard</a></li>
+                <li className="breadcrumb-item active"><a aria-current="page">Dashboard / Donar</a></li>
                 
               </ol>
               

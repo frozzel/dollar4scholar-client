@@ -10,7 +10,7 @@ import UserUpload from "../components/UserUpload";
 import UserWallet from '../components/UserWallet';
 import AOS from 'aos';
 import DonorDashboard from './DonorDash';
-import Counter from '../components/Counter';
+import Counter from '../components/Counter2';
 import UserBuyIn from '../components/UserBuyIn';
 import AdminDash from './AdminDash';
 import gooffy from '../assets/img/profile.jpeg';
@@ -238,7 +238,7 @@ const Dashboard = () => {
             <nav aria-label="breadcrumb" className="bg-light rounded-3 p-3 mb-4">
               <ol className="breadcrumb mb-0">
                 <li className="breadcrumb-item"><a href="/">Home</a></li>
-                <li className="breadcrumb-item active"><a aria-current="page">Dashboard</a></li>
+                <li className="breadcrumb-item active"><a aria-current="page">Dashboard / Student</a></li>
                 
               </ol>
             </nav>
@@ -344,7 +344,7 @@ const Dashboard = () => {
               <div className="col-lg-12">
                 <div className="card mb-4">
                   <div className="card-body">
-                    <h5 className="text-center "> Current Pot Status</h5>
+                    <h5 className="text-center "> Current Scholarship Status</h5>
                     
                     <section id="about" className="about justify-content-between "  style={{padding: 0}}>
                       <Counter size={"col-lg-12"} pot={pot} date={date} />

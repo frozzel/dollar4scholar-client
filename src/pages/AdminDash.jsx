@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useNotification } from "../hooks";
 import { getDonations, getAllWinners, getNumberOfUsers } from '../api/scholarship';
 import AOS from 'aos';
-import Counter from '../components/Counter';
+import Counter from '../components/Counter2';
 import {CgProfile} from "react-icons/cg";
 import {FaUserGraduate} from "react-icons/fa";
 import {BsCoin} from "react-icons/bs";
@@ -116,7 +116,7 @@ const AdminDash = ({pot, date}) => {
               <div className="col-lg-12">
                 <div className="card mb-4">
                   <div className="card-body">
-                    <h5 className="text-center "> Current Pot Status</h5>
+                    <h5 className="text-center "> Current Scholarship Status</h5>
                     
                     <section id="about" className="about justify-content-between "  style={{padding: 0}}>
                       <Counter size={"col-lg-12"} pot={pot} date={date}/>

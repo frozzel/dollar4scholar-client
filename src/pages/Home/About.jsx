@@ -41,7 +41,7 @@ const AboutSection = ({pot, date, message}) => {
         <div className="col-lg-6 pt-3 pt-lg-0 content">
           <h3>🎓 Who We Are</h3>
           <p className="fst-italic">
-          We're a community built by students, for students—envisioned by a college professor and brought to life by students just like you. Our mission is to provide easy, accessible scholarships to support your educational journey, whether you're a high school senior, a university student, or attending trade school. No hurdles, just help!
+          We`re a community built by students, for students—envisioned by a college professor and brought to life by students just like you. Our mission is to provide easy, accessible scholarships to support your educational journey, whether you`re a high school senior, a university student, or attending trade school. No hurdles, just help!
           </p>
           <h3>🤝 Join Our Community</h3>
           <ul>

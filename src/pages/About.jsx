@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
-import cau from '../assets/img/work-process-1.png';
-import lsu from '../assets/img/work-process-2.png';
-import columbia from '../assets/img/work-process-4.png';
-import mh from '../assets/img/work-process-3.png'; 
+// import cau from '../assets/img/work-process-1.png';
+// import lsu from '../assets/img/work-process-2.png';
+// import columbia from '../assets/img/work-process-4.png';
+// import mh from '../assets/img/work-process-3.png'; 
 import { getCurrentPot } from '../api/scholarship';
 import AboutSection from './Home/About.jsx';
 import { useNotification } from "../hooks";
-import { Button, Container } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -71,8 +71,8 @@ const WorkProcessSection = () => {
               </ul>
               <h3>Step 2: Explore Scholarships</h3>
             <ul>
-            <li><i className="bx bx-check-double"></i><strong>Automatic Enrollment:</strong><br></br> Once you subscribe, you're automatically considered for all upcoming scholarships. No need to apply for each one separately!</li>
-                <li><i className="bx bx-check-double"></i><strong>Monthly Scholarships:</strong><br></br> New scholarship opportunities are available every month. Stay active and check back often to see what’s new!</li>
+            <li><i className="bx bx-check-double"></i><strong>Automatic Enrollment:</strong><br></br> Once you subscribe, you`re automatically considered for all upcoming scholarships. No need to apply for each one separately!</li>
+            <li><i className="bx bx-check-double"></i><strong>Monthly Scholarships:</strong><br></br> New scholarship opportunities are available every month. Stay active and check back often to see what’s new!</li>
           
               </ul>
 
@@ -81,7 +81,7 @@ const WorkProcessSection = () => {
                 </div> */}
                 <h3>Step 3: Support and Be Supported</h3>
                 <ul>
-                  <li><i className="bx bx-check-double"></i><strong>Community Engagement:</strong> Our platform is more than just scholarships; it’s a community. Engage with other students, share experiences, and support each other.</li>
+                  <li><i className="bx bx-check-double"></i><strong>Community Engagement:</strong> Our platform is more than just scholarships; it`s a community. Engage with other students, share experiences, and support each other.</li>
                 </ul>
                 <h3>Step 4: Scholarship Selection</h3>
                 <ul>
@@ -90,7 +90,7 @@ const WorkProcessSection = () => {
                 <h3>Step 5: Receive Your Scholarship</h3>
                 <ul>
                   <li><i className="bx bx-check-double"></i><strong>Quick and Easy Transfer:</strong> Scholarships are transferred directly to your school/university.</li>
-                  <li><i className="bx bx-check-double"></i><strong> No Strings Attached: </strong>Use your scholarship for tuition, books, or other educational expenses. It's your choice!</li>
+                  <li><i className="bx bx-check-double"></i><strong> No Strings Attached: </strong>Use your scholarship for tuition, books, or other educational expenses. It`s your choice!</li>
                 </ul>
                 <h3>Community Funded, Community Focused</h3>
                 <ul>
@@ -231,7 +231,7 @@ const About = () => {
 
   useEffect( () => {
     fetchPot()
-  }, [])
+  })
 
   useEffect(() => {
     setMessage(notification)
