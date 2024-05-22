@@ -202,14 +202,14 @@ const Dashboard = () => {
                 <NotVerified />
             <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
                 <p className="text-muted">
-                Please Verify your account or Log back in</p>
+                Please Log back in or Verify your account</p>
             </div>
             </main>
         );
     }
 
-  const { name, avatar,  major, address, email, phone, birth, school, wallet} = user;
-
+  const { name, avatar,  major, address, email, phone, birth, school, wallet, subscription} = user;
+    console.log(subscription);
   if (userId !== authInfo.profile.id) {
     return (
       <main id="main">
@@ -267,11 +267,18 @@ const Dashboard = () => {
             <div className="card mb-4 mb-lg-0">
               <div className="card-body p-0">
                 <ul className="list-group list-group-flush rounded-3">
-                    <h5 className='mt-3 text-center'>Wallet</h5>
+                    <h5 className='mt-3 text-center'>Subscription Status</h5>
                   <li className=" d-flex justify-content-between align-items-center px-4 ">
+                   {(subscription === false || subscription === "undefined")  ? (
+                     <i className="bi bi-x-circle" style={{ color: '#f00',  fontSize: 45}} ></i>
+                     
+                    ) : (<i className="bi bi-check-circle" style={{ color: '#94c045',  fontSize: 45}} ></i>)  }
                     
-                  <i className="bi bi-coin " style={{ color: '#94c045',  fontSize: 45}} ></i>
-                    <p className="" style={{color: "#94c045", fontSize: 32}}>${wallet}</p>
+                  {(subscription === false || subscription === undefined) ? (
+                    <p className="" style={{color: "#f00", fontSize: 32}}>No Subscription</p>
+                  ) : (
+                    <p className="" style={{color: "#94c045", fontSize: 32}}>All Set</p>
+                  )}
                   </li>
                   <li className=" d-flex justify-content-between align-items-center px-2">
                   <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Add Funds</Button>
@@ -350,7 +357,7 @@ const Dashboard = () => {
                       <Counter size={"col-lg-12"} pot={pot} date={date} />
   
                         <div className=" text-center mb-2">
-                            <Button onClick={handleOnBuyInClick} className="getstarted2" variant="outline-*">Buy In</Button>
+                            <Button onClick={handleOnBuyInClick} className="getstarted2" variant="outline-*">Subscribe</Button>
                         </div>
                     </section>
                     
