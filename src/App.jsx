@@ -12,8 +12,8 @@ import ConfirmPassword from "./auth/ConfirmPassword";
 // import Collegesnuniversities from "./pages/Collegesnuniversities";
 // import Investors from "./pages/Investors";
 import About from "./pages/About";
-import Donor from "./pages/Donor";
-import Student from "./pages/Student";
+// import Donor from "./pages/Donor";
+// import Student from "./pages/Student";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
 import DonorSpotLight from "./pages/DonorSpotLight";
@@ -40,8 +40,8 @@ function App() {
         {/* <Route path='/Collegesnuniversities' element={<Collegesnuniversities/>} />
         <Route path='/Investors' element={<Investors/>} /> */}
         <Route path='/About' element={<About />} />
-        <Route path='/Donor' element={<Donor/>} />
-        <Route path='/Student' element={<Student/>} />
+        {/* <Route path='/Donor' element={<Donor/>} /> */}
+        {/* <Route path='/Student' element={<Student/>} /> */}
         <Route path='/Contact' element={<Contact/>} />
         <Route path='/Dashboard/:userId' element={<Dashboard/>} />
         <Route path='/DonorSpotLight' element={<DonorSpotLight/>} />
