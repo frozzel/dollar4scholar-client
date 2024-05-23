@@ -28,8 +28,8 @@ export default function UserWallet({
     <ModalContainer visible={visible} onClose={onClose} ignoreContainer>
     <WalletForm
       onSubmit={!busy ? handleSubmit : null}
-      title="Wallet"
-      btnTitle="Pay"
+      title="Subscription "
+      btnTitle="Subscribe"
       busy={busy}
       initialState={initialState}
     />
