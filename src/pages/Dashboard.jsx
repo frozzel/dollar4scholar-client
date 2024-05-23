@@ -111,13 +111,14 @@ const Dashboard = () => {
 
       //add wallet funds on click
       const handleOnEditClickWallet = () => {
-        const { id, name, wallet, email, stripeId} = user;
+        const { id, name, wallet, email, stripeId, subscription} = user;
         setWallet({
           id,
           name,
           wallet,
           email,
-          stripeId
+          stripeId,
+          subscription
         })
         setShowWalletModal(true);
       };
@@ -177,8 +178,7 @@ const Dashboard = () => {
     useEffect(() => {
       AOS.init({duration: 1000, once: true});
      
-    }
-      , []);
+    }, []);
 
     useEffect(() => {
         fetchPot();
@@ -208,8 +208,8 @@ const Dashboard = () => {
         );
     }
 
-  const { name, avatar,  major, address, email, phone, birth, school, wallet, subscription} = user;
-    console.log(subscription);
+  const { name, avatar,  major, address, email, phone, birth, school, subscription} = user;
+  
   if (userId !== authInfo.profile.id) {
     return (
       <main id="main">
@@ -281,7 +281,7 @@ const Dashboard = () => {
                   )}
                   </li>
                   <li className=" d-flex justify-content-between align-items-center px-2">
-                  <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Add Funds</Button>
+                  <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Subscribe</Button>
                     </li>
  
                 </ul>
@@ -357,7 +357,7 @@ const Dashboard = () => {
                       <Counter size={"col-lg-12"} pot={pot} date={date} />
   
                         <div className=" text-center mb-2">
-                            <Button onClick={handleOnBuyInClick} className="getstarted2" variant="outline-*">Subscribe</Button>
+                            <Button onClick={handleOnBuyInClick} className="getstarted2" variant="outline-*">Unsubscribe</Button>
                         </div>
                     </section>
                     
