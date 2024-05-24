@@ -1,5 +1,6 @@
 // Desc: Footer component for Dollar4Scholar
 // import './footer.css'
+import { Link } from 'react-router-dom'
 
 
 export default function Footer() {
@@ -28,10 +29,14 @@ export default function Footer() {
     </div>
 
     <div className="container" >
-      <div className="copyright" style={{padding: "1rem"}}>
-        &copy; Copyright 2023 - <strong><span>Dollar4Scholar</span></strong>. All Rights Reserved
+      <div className="copyright" style={{padding: "1rem"}}><small>
+        &copy; Copyright 2023 - <strong><span>Dollar4Scholar</span></strong>. All Rights Reserved</small>
         <div>
-          <small >* Scholarship Total before 15% tax and site fees</small>
+
+          {/* <p><small >* Scholarship Total before 15% tax and site fees</small><br /> */}
+          <p>
+          <small><small>Designed by <Link className="text-white" to="https://cyrusgroupinnovations.com">Cyrus Group Innovations</Link></small></small></p>
+
 
         </div>
       </div>
