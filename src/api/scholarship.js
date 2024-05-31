@@ -124,7 +124,7 @@ export const getNumberOfUsers = async () => {
 // path to get session data
 export const getSessionData = async (transactionAmount) => {
   try {
-    const { data } = await client.post(`/stripe/create-checkout-session`, transactionAmount);
+    const { data } = await client.post(`/stripe/create-subscription`, transactionAmount);
     return data;
   } catch (error) {
     return catchError(error);
