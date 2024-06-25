@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { useNotification } from "../hooks";
 import { getProfile } from "../api/user";
 import UserUploadDonor from "../components/UserUploadDonor";
-import UserWallet from '../components/UserWallet';
+import UserWallet from '../components/DonarWallet';
 import AOS from 'aos';
 import logo from '../assets/img/clients/client-1.png';
 import UserDonate from '../components/UserDonate';

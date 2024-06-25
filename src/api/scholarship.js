@@ -130,6 +130,14 @@ export const getSessionData = async (transactionAmount) => {
     return catchError(error);
   }
 }
+export const getSessionDataDonor = async (transactionAmount) => {
+  try {
+    const { data } = await client.post(`/stripe/create-checkout-session`, transactionAmount);
+    return data;
+  } catch (error) {
+    return catchError(error);
+  }
+}
 // get session status
 export const getSessionStatus = async (sessionId) => {
   try {
