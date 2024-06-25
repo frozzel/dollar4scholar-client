@@ -60,6 +60,7 @@ export default function SignUp() {
   const navigate = useNavigate();
 
   const {updateNotification} = useNotification()
+  console.log(notification);
 
   const handleChange = ({target}) => {
     const {name, value} = target;
@@ -75,7 +76,7 @@ export default function SignUp() {
     if(!ok) return updateNotification('error', error, );
 
     const response = await createUser(userInfo);
-    if(response.error) return updateNotification(response.error);
+    if(response.error) return updateNotification( 'error', response.error);
     navigate("/auth/verification", {
       state: {user: response.user}, 
       replace: true
@@ -94,6 +95,7 @@ export default function SignUp() {
   , [])
   useEffect(() => {
     setMessage(notification)
+
   } , [notification])
 
   return (
