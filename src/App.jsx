@@ -21,6 +21,7 @@ import Winner from "./pages/Winner";
 import AdminDonorInfo from "./pages/AdminDonorInfo";
 import AdminWinnerInfo from "./pages/AdminWinnerInfo";
 import CheckoutForm from "./components/CheckoutForm";
+import CheckoutFormDonor from "./components/CheckoutFormDonor";
 import Return from "./components/Return";
 
 
@@ -49,6 +50,7 @@ function App() {
         <Route path='/AdminDonorInfo/:userId' element={<AdminDonorInfo />} />
         <Route path="/AdminWinnerInfo/:userId" element={<AdminWinnerInfo />} />
         <Route path="/checkout" element={<CheckoutForm />} />
+        <Route path="/checkoutDonor" element={<CheckoutFormDonor />} />
           <Route path="/return" element={<Return />} />
       </Routes>
     <Footer />
