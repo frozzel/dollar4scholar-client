@@ -104,7 +104,7 @@ export default function EmailVerification() {
 
   useEffect(() => {
     if (!user) navigate("/not-found");
-    if (isLoggedIn && isVerified) navigate("/");
+    if (isLoggedIn && isVerified)navigate(`/Dashboard/${user.id}`);
   }, [user, isLoggedIn, isVerified, navigate]);
 
   useEffect(() => {
