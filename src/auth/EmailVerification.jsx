@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { verifyUserEmail } from "../api/auth";
 import { commonModalClasses } from "../utils/theme";
@@ -7,7 +7,7 @@ import { useAuth, useNotification } from "../hooks";
 import { resendEmailVerificationToken } from "../api/auth";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import AOS from 'aos';
-import CustomLink from "../components/CustomLink";
+// import CustomLink from "../components/CustomLink";
 
 const OTP_LENGTH = 6;
 let currentOTPIndex;
@@ -133,7 +133,9 @@ export default function EmailVerification() {
           <Col md={7} lg={5} xl={5} className="offset-xl-1 ">
 
     <FormContainer className="container">
-      <form onSubmit={handleSubmit} className={commonModalClasses } variant="outline-*">
+      {/* <form onSubmit={handleSubmit} className={commonModalClasses } variant="outline-*"> */}
+      <form onSubmit={handleSubmit} className={commonModalClasses } >
+
         <div className="text-center  pt-4">
           <h5>Please enter the Code to verify your account</h5>
           <p className="text-light-subtle">
@@ -167,7 +169,7 @@ export default function EmailVerification() {
             Verify Account
           </Button>
           <button onClick={handleOTPResend} type="button" className="btn btn-link text-primary font-weight-bold">
-            I don't have a code
+            I don`t have a code
           </button>
         </div>
         <div className="text-danger text-center">{message}</div>
