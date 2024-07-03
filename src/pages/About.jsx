@@ -110,6 +110,7 @@ const WorkProcessSection = () => {
                   <ul>
                     <li><i className="bx bx-check-double"></i><strong>$1.50 goes directly to the scholarship fund: </strong>This portion is pooled together to create the scholarships awarded to students like you.</li>
                     <li><i className="bx bx-check-double"></i><strong>$1.29 covers the operational costs: </strong>This helps maintain our website and supports the development of our upcoming mobile app, ensuring a seamless experience for all users.</li>
+                    <li><i className='bx bx-check-double'></i><strong>$0.42 covers the Credit Card Charges out of the $1.29: </strong>$0.87 goes to the Remainder of our maintenance cost</li>
                   </ul>
             </div>
           </div>
