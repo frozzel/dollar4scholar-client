@@ -157,3 +157,21 @@ export const getActiveStatus = async () => {
     return catchError(error);
   }
 }
+
+/// path to cancel subscription
+
+export const cancelSubscription = async (userId, subscriptionId) => {
+  
+  const token = getToken();
+  try {
+    const { data } = await client.delete(`/stripe/cancel-subscription/${userId}`,  subscriptionId, {
+      headers: {
+        authorization: "Bearer " + token,
+      },
+    });
+    return data;
+  }
+  catch (error) {
+    return catchError(error);
+  }
+}

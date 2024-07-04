@@ -11,7 +11,7 @@ import UserWallet from '../components/UserWallet';
 import AOS from 'aos';
 import DonorDashboard from './DonorDash';
 import Counter from '../components/Counter2';
-import UserBuyIn from '../components/UserBuyIn';
+import UserBuyIn from '../components/UserUnsubscribe';
 import AdminDash from './AdminDash';
 import gooffy from '../assets/img/profile.jpeg';
 
@@ -53,7 +53,6 @@ const Dashboard = () => {
     const [buyInState, setBuyIn] = useState(null);
     
     
-
     const fetchProfile = async () => {
         const { error, user } = await getProfile(userId);
           if (error) return updateNotification("error", error);
@@ -95,11 +94,12 @@ const Dashboard = () => {
       };
       //add buy in funds on click
       const handleOnBuyInClick = () => {
-        const { id, name, wallet } = user;
+        const { id, name, wallet, subscriptionId } = user;
         setBuyIn({
           id,
           name,
           wallet,
+          subscriptionId
           
         })
         setShowBuyInModal(true);
@@ -162,7 +162,7 @@ const Dashboard = () => {
       setUser(prevUser => {
         return {
           ...prevUser,
-          wallet: updatedBuyIn
+          subscription: false,
         };
       });
     };
@@ -266,7 +266,7 @@ const Dashboard = () => {
             </div>
             <div className="card mb-4 mb-lg-0">
               <div className="card-body p-0">
-                <ul className="list-group list-group-flush rounded-3">
+                <ul className="list-group list-group-flush rounded-3 list-none">
                     <h5 className='mt-3 text-center'>Subscription Status</h5>
                   <li className=" d-flex justify-content-between align-items-center px-4 ">
                    {(subscription === false || subscription === "undefined")  ? (
@@ -280,9 +280,18 @@ const Dashboard = () => {
                     <p className="" style={{color: "#94c045", fontSize: 32}}>All Set</p>
                   )}
                   </li>
-                  <li className=" d-flex justify-content-between align-items-center px-2">
-                  <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Subscribe</Button>
-                    </li>
+                  {/* <li className="d-flex justify-content-between align-items-center px-2 "> */}
+                    {(subscription === false || subscription === "undefined") ? (
+                      <li className="d-flex justify-content-between align-items-center px-2 ">
+                      <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Subscribe</Button>
+                      </li>
+                    ) : (
+                      <li className="flex text-center list-none" style={{color: "#94c045", textAlign: "center", listStyleType: "none"}}>
+                      <div className=" text-center pb-1"  style={{color: "#94c045", textAlign: "center"}}>Your Subscribed</div>
+                      </li>
+                 
+                    )}
+                    {/* </li> */}
  
                 </ul>
               </div>
@@ -357,7 +366,13 @@ const Dashboard = () => {
                       <Counter size={"col-lg-12"} pot={pot} date={date} />
   
                         <div className=" text-center mb-2">
+                          {subscription === false || subscription === "undefined" ? (
+                            null
+                          ) : (
                             <Button onClick={handleOnBuyInClick} className="getstarted2" variant="outline-*">Unsubscribe</Button>
+                          )
+                            }
+                            
                         </div>
                     </section>
                     
