@@ -69,10 +69,10 @@ const Breadcrumbs = () => {
                       <h3 className="dark-color">{name}</h3>
                       <h6 className="text-info lead">School: {school} </h6>
                       <h6 className="text-info lead">Major: {major} </h6>
-                      <p>"Cheers to a brighter future! These fortunate students have earned the dollar4scholar scholarship, paving the way for their educational dreams to come true. #ScholarshipWinners #BrightFutureAhead #dollar4scholar"</p>
+                      <p>"Cheers to a brighter future! These fortunate students have earned the dollar4scholar scholarship, paving the way for their educational dreams to come true. #Scholarship #BrightFutureAhead #dollar4scholar"</p>
                       <div className="row about-list">
                           <div className="col-md-6">
-                              <h2 className="theme-color">Winnings ${potWinner}</h2>   
+                              <h2 className="theme-color">Scholarship Amount ${potWinner}</h2>   
                           </div>
                       </div>
                   </div>
