@@ -91,6 +91,8 @@ export default function WalletForm({
       
       {/* <div className="d-flex justify-content-end align-items-center "> */}
       <div className="d-flex justify-content-center align-items-center ">
+     
+       
         
       <Button
           className="getstarted2"

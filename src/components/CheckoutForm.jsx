@@ -5,6 +5,7 @@ import {
   EmbeddedCheckout
 } from '@stripe/react-stripe-js';
 import { getSessionData } from "../api/scholarship";
+import PaymentForm from "./PaymentForm";
 
 
 
@@ -38,7 +39,7 @@ const CheckoutForm = () => {
   return (
     <main id="main" style={{marginTop: "200px", marginBottom: "20px"}}>
     <div id="checkout">
-      {clientSecret && (
+      {/* {clientSecret && (
         <EmbeddedCheckoutProvider
           stripe={stripePromise}
           options={{clientSecret}}
@@ -50,7 +51,8 @@ const CheckoutForm = () => {
         >
           <EmbeddedCheckout />
         </EmbeddedCheckoutProvider>
-      )}
+      )} */}
+      <PaymentForm />
     </div>
     </main>
   )
