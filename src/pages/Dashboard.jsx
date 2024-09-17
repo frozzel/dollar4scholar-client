@@ -224,7 +224,6 @@ const Dashboard = () => {
   }
     
     
-
   //check and see if user is student or not
   if (user.type === "student" || user.type === "fresh" && userId === authInfo.profile.id) {
   return (
@@ -285,7 +284,12 @@ const Dashboard = () => {
                     {(subscription === false || subscription === "undefined") ? (
                       <li className="d-flex justify-content-between align-items-center px-2 ">
                       {/* <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Subscribe</Button> */}
-                      <PaymentForm  className="getstarted2 " variant="outline-*"/>
+                      <PaymentForm 
+                          userId={userId} 
+                          email={user.email}
+                          // className="  getstarted2 "  
+                          // variant="outline-*"
+                          />
                       </li>
                     ) : (
                       <li className="flex text-center list-none" style={{color: "#94c045", textAlign: "center", listStyleType: "none"}}>

@@ -5,13 +5,14 @@ import { catchError } from "../utils/helper.jsx";
 
 export const getAnAcceptPaymentPage = async (userId, refId, amount, email) => {
     const token = getToken();
-    console.log(userId);
+    // console.log("API pass", userId, email);
     try {
         const { data } = await client.post(`/auth/paymentPage`, {
             headers: {
                 'Authorization': 'Bearer ' + token,
             },
             params: {
+                userId,
                 refId,
                 amount,
                 email
