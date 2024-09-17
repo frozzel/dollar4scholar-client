@@ -3,7 +3,7 @@ import client from "./client";
 
 
 export const createUser = async (userInfo) => {
-  
+  // console.log("User Info", userInfo);
   try {
     const { data } = await client.post("/user/create", userInfo);
     return data;
@@ -99,9 +99,10 @@ export const resetPassword = async (passwordInfo) => {
   }
 };
 export const resendEmailVerificationToken = async (userId) => {
+  // console.log("User Id", userId);
   try {
     const { data } = await client.post("/user/resend-email-verification-token", {userId});
-    console.log("Data Returned",data);
+    // console.log("Data Returned",data);
     return data;
   } catch (error) {
     const { response } = error;
