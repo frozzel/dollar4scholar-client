@@ -52,6 +52,8 @@ const Dashboard = () => {
     const [walletState, setWallet] = useState(null);
     const [showBuyInModal, setShowBuyInModal] = useState(false);
     const [buyInState, setBuyIn] = useState(null);
+
+    console.log("User Dashboard", user.type);
     
     
     const fetchProfile = async () => {
@@ -112,14 +114,15 @@ const Dashboard = () => {
 
       //add wallet funds on click
       const handleOnEditClickWallet = () => {
-        const { id, name, wallet, email, stripeId, subscription} = user;
+        const { id, name, wallet, email, stripeId, subscription, type} = user;
         setWallet({
           id,
           name,
           wallet,
           email,
           stripeId,
-          subscription
+          subscription,
+          type
         })
         setShowWalletModal(true);
       };
@@ -283,13 +286,13 @@ const Dashboard = () => {
                   {/* <li className="d-flex justify-content-between align-items-center px-2 "> */}
                     {(subscription === false || subscription === "undefined") ? (
                       <li className="d-flex justify-content-between align-items-center px-2 ">
-                      {/* <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Subscribe</Button> */}
-                      <PaymentForm 
+                      <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Subscribe</Button>
+                      {/* <PaymentForm 
                           userId={userId} 
                           email={user.email}
                           // className="  getstarted2 "  
                           // variant="outline-*"
-                          />
+                          /> */}
                       </li>
                     ) : (
                       <li className="flex text-center list-none" style={{color: "#94c045", textAlign: "center", listStyleType: "none"}}>

@@ -3,7 +3,7 @@ import { getToken } from "../utils/helper.jsx";
 import { catchError } from "../utils/helper.jsx";
 
 
-export const getAnAcceptPaymentPage = async (userId, refId, amount, email) => {
+export const getAnAcceptPaymentPage = async (userId, email, refId, amount) => {
     const token = getToken();
     // console.log("API pass", userId, email);
     try {
@@ -13,12 +13,12 @@ export const getAnAcceptPaymentPage = async (userId, refId, amount, email) => {
             },
             params: {
                 userId,
+                email,
                 refId,
                 amount,
-                email
             }
         });
-        console.log(data);
+        // console.log("Data API",data);
         return data;
     }
     catch (error) {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ImSpinner3 } from "react-icons/im";
 import { Button } from "react-bootstrap";
+import PaymentForm from "../components/PaymentForm";
 // import { Link } from "react-router-dom";
 
 
@@ -18,7 +19,7 @@ export default function WalletForm({
     name: userName || "", 
     wallet: walletValue || ""
   });
-
+  console.log("User Info", initialState,);
 
   const handleChange = ({ target }) => {
     console.log(target);
@@ -45,11 +46,11 @@ export default function WalletForm({
 
   window.location.href = `${import.meta.env.VITE_DOMAIN}/checkout${queryString}`;
   };
-
+  const amount = 2.79;
   return (<>
-    <form
+    <div
       className="bg-light  p-3 rounded"
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
     >
       <div className="d-flex justify-content-center align-items-center mb-3" style={{minWidth: "300px"}}>
         <h1 className="font-weight-bold text-xl text-dark">
@@ -93,15 +94,15 @@ export default function WalletForm({
       <div className="d-flex justify-content-center align-items-center ">
      
        
-        
-      <Button
+      <PaymentForm userId={initialState.id} email={initialState.email} refId={initialState.type} amount={amount} />
+      {/* <Button
           className="getstarted2"
           type="submit"
           variant="outline-*"
         >
           {busy ? <ImSpinner3 className="spinner-border" /> : btnTitle}
 
-        </Button>
+        </Button> */}
 {/* 
           <Button variant="outline-*" target="_blank" href="https://www.skrill.com/en-us/business/integration/" >
 
@@ -113,7 +114,8 @@ export default function WalletForm({
         </div>
         <div className="d-flex justify-content-center align-items-center " style={{fontSize: 9, color: "red"}}>We are changing are payment provider please wait while we update our system!</div>
 
-    </form>
+    </div>
+    
     
     </>);
 }
