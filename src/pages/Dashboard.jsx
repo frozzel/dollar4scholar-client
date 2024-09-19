@@ -14,8 +14,6 @@ import Counter from '../components/Counter2';
 import UserBuyIn from '../components/UserUnsubscribe';
 import AdminDash from './AdminDash';
 import gooffy from '../assets/img/profile.jpeg';
-import PaymentForm from '../components/PaymentForm';
-
 
 
 
@@ -53,7 +51,7 @@ const Dashboard = () => {
     const [showBuyInModal, setShowBuyInModal] = useState(false);
     const [buyInState, setBuyIn] = useState(null);
 
-    console.log("User Dashboard", user.type);
+    // console.log("User Dashboard", user.stripeId);
     
     
     const fetchProfile = async () => {

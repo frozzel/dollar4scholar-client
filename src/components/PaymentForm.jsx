@@ -3,22 +3,23 @@ import { useState, useEffect } from 'react';
 import {getAnAcceptPaymentPage} from '../api/payment';
 
 
-function PaymentForm({userId, email, refId, amount}) {
+function PaymentForm({userId, email, refId, amount, stripeId}) {
   console.log("USR ID", userId);
   console.log("USR email", email);
   console.log("USR refId", refId);
   console.log("USR amount", amount);
+  console.log("USR stripeId", stripeId);
     const [formToken, setFormToken] = useState('');
 
-    const getToken = async (userId, email, refId, amount) => {
-        const response = await getAnAcceptPaymentPage( userId, email, refId, amount);
+    const getToken = async (userId, email, refId, amount, stripeId) => {
+        const response = await getAnAcceptPaymentPage( userId, email, refId, amount, stripeId);
         return response;
       }
 
     useEffect(() => {
-        getToken(userId, email, refId, amount).then((token) => setFormToken(token));
+        getToken(userId, email, refId, amount, stripeId).then((token) => setFormToken(token));
       }
-    , [userId, email, refId, amount]);
+    , [userId, email, refId, amount, stripeId]);
 
       return formToken ? (
               // <div className="d-flex justify-content-between align-items-center px-2 ">
