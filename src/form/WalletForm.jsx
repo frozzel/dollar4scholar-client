@@ -19,7 +19,7 @@ export default function WalletForm({
     name: userName || "", 
     wallet: walletValue || ""
   });
-  console.log("User Info", initialState,);
+  // console.log("User Info", initialState,);
 
   const handleChange = ({ target }) => {
     console.log(target);
@@ -94,7 +94,7 @@ export default function WalletForm({
       <div className="d-flex justify-content-center align-items-center ">
      
        
-      <PaymentForm userId={initialState.id} email={initialState.email} refId={initialState.type} amount={amount} />
+      <PaymentForm userId={initialState.id} email={initialState.email} refId={initialState.type} amount={amount} stripeId={initialState.stripeId} />
       {/* <Button
           className="getstarted2"
           type="submit"
