@@ -5,7 +5,7 @@ import { catchError } from "../utils/helper.jsx";
 
 export const getAnAcceptPaymentPage = async (userId, email, refId, amount, stripeId) => {
     const token = getToken();
-    console.log("API pass", userId, email, refId, amount, stripeId);
+    // console.log("API pass", userId, email, refId, amount, stripeId);
     try {
         const { data } = await client.post(`/auth/paymentPage`, {
             headers: {

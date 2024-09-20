@@ -4,11 +4,11 @@ import {getAnAcceptPaymentPage} from '../api/payment';
 
 
 function PaymentForm({userId, email, refId, amount, stripeId}) {
-  console.log("USR ID", userId);
-  console.log("USR email", email);
-  console.log("USR refId", refId);
-  console.log("USR amount", amount);
-  console.log("USR stripeId", stripeId);
+  // console.log("USR ID", userId);
+  // console.log("USR email", email);
+  // console.log("USR refId", refId);
+  // console.log("USR amount", amount);
+  // console.log("USR stripeId", stripeId);
     const [formToken, setFormToken] = useState('');
 
     const getToken = async (userId, email, refId, amount, stripeId) => {
