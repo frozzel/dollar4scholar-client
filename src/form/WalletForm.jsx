@@ -94,7 +94,7 @@ export default function WalletForm({
       <div className="d-flex justify-content-center align-items-center ">
      
        
-      <PaymentForm userId={initialState.id} email={initialState.email} refId={initialState.type} amount={amount} stripeId={initialState.stripeId} />
+      <PaymentForm userId={initialState.id} email={initialState.email} refId={initialState.type} amount={amount} />
       {/* <Button
           className="getstarted2"
           type="submit"

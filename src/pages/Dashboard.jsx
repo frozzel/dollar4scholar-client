@@ -50,8 +50,6 @@ const Dashboard = () => {
     const [walletState, setWallet] = useState(null);
     const [showBuyInModal, setShowBuyInModal] = useState(false);
     const [buyInState, setBuyIn] = useState(null);
-
-    // console.log("User Dashboard", user.stripeId);
     
     
     const fetchProfile = async () => {
@@ -112,13 +110,12 @@ const Dashboard = () => {
 
       //add wallet funds on click
       const handleOnEditClickWallet = () => {
-        const { id, name, wallet, email, stripeId, subscription, type} = user;
+        const { id, name, wallet, email, subscription, type} = user;
         setWallet({
           id,
           name,
           wallet,
           email,
-          stripeId,
           subscription,
           type
         })
