@@ -266,17 +266,23 @@ const Dashboard = () => {
               <div className="card-body p-0">
                 <ul className="list-group list-group-flush rounded-3 list-none">
                     <h5 className='mt-3 text-center'>Subscription Status</h5>
+                    
                   <li className=" d-flex justify-content-between align-items-center px-4 ">
                    {(subscription === false || subscription === "undefined")  ? (
                      <i className="bi bi-x-circle" style={{ color: '#f00',  fontSize: 45}} ></i>
+                     
                      
                     ) : (<i className="bi bi-check-circle" style={{ color: '#94c045',  fontSize: 45}} ></i>)  }
                     
                   {(subscription === false || subscription === undefined) ? (
                     <p className="" style={{color: "#f00", fontSize: 32}}>No Subscription</p>
+                    
                   ) : (
                     <p className="" style={{color: "#94c045", fontSize: 32}}>All Set</p>
                   )}
+                  </li>
+                  <li className="d-flex justify-content-between align-items-center px-2 ">
+                  <h7 className="text-center" style={{color: "#f00", fontSize: 18}}>Please Allow up to 10 minutes for your subscription to process</h7>
                   </li>
                   {/* <li className="d-flex justify-content-between align-items-center px-2 "> */}
                     {(subscription === false || subscription === "undefined") ? (
