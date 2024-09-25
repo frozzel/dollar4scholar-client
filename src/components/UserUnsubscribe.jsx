@@ -17,6 +17,7 @@ export default function UserBuyIn({
   const { updateNotification } = useNotification();
 
   const handleSubmit = async () => {
+    // console.log(initialState.id, initialState.subscriptionId);
     
     setBusy(true);
     const { error, message } = await cancelSubscription(initialState.id, initialState.subscriptionId);

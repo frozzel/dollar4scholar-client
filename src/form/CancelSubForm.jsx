@@ -14,10 +14,13 @@ export default function DonateForm({
   walletValue, // Add wallet value prop
   subscriptionId,
 }) {
+  
   const [userInfo, setUserInfo] = useState({ 
     name: userName || "", 
     wallet: walletValue || ""
   });
+
+  // console.log(userInfo);
 
   const handleChange = ({ target }) => {
     const { value, name } = target;
