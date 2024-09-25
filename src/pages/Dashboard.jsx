@@ -220,7 +220,7 @@ const Dashboard = () => {
       </main>
   );
   }
-    
+    // console.log("Buy in state", buyInState);
     
   //check and see if user is student or not
   if (user.type === "student" || user.type === "fresh" && userId === authInfo.profile.id) {

@@ -164,7 +164,8 @@ export const cancelSubscription = async (userId, subscriptionId) => {
   
   const token = getToken();
   try {
-    const { data } = await client.delete(`/stripe/cancel-subscription/${userId}`,  subscriptionId, {
+    const { data } = await client.delete(`/auth/cancel-subscription/${userId}`,  subscriptionId, {
+      
       headers: {
         authorization: "Bearer " + token,
       },
