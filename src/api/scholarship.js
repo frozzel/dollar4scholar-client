@@ -163,7 +163,7 @@ export const getActiveStatus = async () => {
 export const cancelSubscription = async (userId, subscriptionId) => {
   
   const token = getToken();
-  try {
+  // try {
     const { data } = await client.delete(`/auth/cancel-subscription/${userId}`,  subscriptionId, {
       
       headers: {
@@ -172,7 +172,5 @@ export const cancelSubscription = async (userId, subscriptionId) => {
     });
     return data;
   }
-  catch (error) {
-    return catchError(error);
-  }
-}
+
+
