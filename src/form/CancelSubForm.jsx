@@ -53,7 +53,7 @@ export default function DonateForm({
     }
     const walletValue = parseFloat(userInfo.wallet); // Convert wallet value to a number
     const jsonPayload =  subscriptionId; // Create JSON object
-    console.log(jsonPayload);
+    // console.log(jsonPayload);
 
     onSubmit(subscriptionId); // Submit the JSON object
   };

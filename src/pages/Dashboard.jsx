@@ -281,10 +281,12 @@ const Dashboard = () => {
                     <p className="" style={{color: "#94c045", fontSize: 32}}>All Set</p>
                   )}
                   </li>
-                  <li className="d-flex justify-content-between align-items-center px-2 ">
-                  <h7 className="text-center" style={{color: "#f00", fontSize: 18}}>Please Allow up to 10 minutes for your subscription to process</h7>
+                  {(subscription === false || subscription === undefined) ? (
+                    <li className="d-flex justify-content-between align-items-center px-2 ">
+                  <p className="text-center" style={{color: "#f00", fontSize: 18}}>Please Allow up to 10 minutes for your subscription to process</p>
                   </li>
-                  {/* <li className="d-flex justify-content-between align-items-center px-2 "> */}
+                ) : (null)}
+           
                     {(subscription === false || subscription === "undefined") ? (
                       <li className="d-flex justify-content-between align-items-center px-2 ">
                       <Button onClick={handleOnEditClickWallet} className="getstarted2 " variant="outline-*">Subscribe</Button>
@@ -297,7 +299,7 @@ const Dashboard = () => {
                       </li>
                     ) : (
                       <li className="flex text-center list-none" style={{color: "#94c045", textAlign: "center", listStyleType: "none"}}>
-                      <div className=" text-center pb-1"  style={{color: "#94c045", textAlign: "center"}}>Your Subscribed</div>
+                      <div className=" text-center pb-1"  style={{color: "#94c045", textAlign: "center", fontSize: 24}}>Your Subscribed</div>
                       </li>
                  
                     )}
