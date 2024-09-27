@@ -89,13 +89,13 @@ const DonorDashboard = ({pot, date}) => {
 
       //add wallet funds on click
       const handleOnEditClickWallet = () => {
-        const { id, name, wallet, email, stripeId} = user;
+        const { id, name, wallet, email, type} = user;
         setWallet({
           id,
           name,
           wallet,
           email,
-          stripeId
+          type,
         })
         setShowWalletModal(true);
       };

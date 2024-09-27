@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 // import { AcceptHosted } from 'react-acceptjs';
-import {getAnAcceptPaymentPage} from '../api/payment';
+import {getAnAcceptPaymentPageDonor} from '../api/payment';
 
 
 function PaymentForm({userId, email, refId, amount, stripeId}) {
-  // console.log("USR ID", userId);
-  // console.log("USR email", email);
-  // console.log("USR refId", refId);
-  // console.log("USR amount", amount);
-  // console.log("USR stripeId", stripeId);
+  console.log("USR ID", userId);
+  console.log("USR email", email);
+  console.log("USR refId", refId);
+  console.log("USR amount", amount);
+  
     const [formToken, setFormToken] = useState('');
 
     const getToken = async (userId, email, refId, amount) => {
-        const response = await getAnAcceptPaymentPage( userId, email, refId, amount);
+        const response = await getAnAcceptPaymentPageDonor( userId, email, refId, amount);
         return response;
       }
 
