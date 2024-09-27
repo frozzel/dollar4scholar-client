@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ImSpinner3 } from "react-icons/im";
 import { Button } from "react-bootstrap";
-// import { Link } from "react-router-dom";
+import {getAnAcceptPaymentPageDonor} from '../api/payment';
 
 
 export default function WalletForm({
@@ -18,7 +18,7 @@ export default function WalletForm({
     name: userName || "", 
     wallet: walletValue || ""
   });
-
+  const [formToken, setFormToken] = useState('');
 
   const handleChange = ({ target }) => {
     const { value, name } = target;
@@ -27,19 +27,43 @@ export default function WalletForm({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log("User Info", userInfo);
     const formData = new FormData();
     for (let key in userInfo) {
         if (key) formData.append(key, userInfo[key]);
     }
+    const getToken = async (userId, email, refId, amount) => {
+      const response = await getAnAcceptPaymentPageDonor( userId, email, refId, amount);
+      setFormToken(response);
+      return console.log("Form Token function", response);
+    }
+    getToken(initialState.id, initialState.email, initialState.type, Number(userInfo.wallet));
+     // Perform a POST request using a dynamically created form
+     const form = document.createElement('form');
+     form.method = 'post';
+     form.action = 'https://test.authorize.net/payment/payment';
+
+     const tokenInput = document.createElement('input');
+     tokenInput.type = 'hidden';
+     tokenInput.name = 'token';
+     tokenInput.value = formToken;
+
+     form.appendChild(tokenInput);
+     document.body.appendChild(form);
+     
+     form.submit();
+
+
+    // window.location.href = `https://test.authorize.net/payment/payment/${formToken}`;
     // const walletValue = parseFloat(userInfo.wallet); // Convert wallet value to a number
     // const jsonPayload = { wallet: walletValue }; // Create JSON object
 
     // onSubmit(jsonPayload); // Submit the JSON object
 
      // Redirect to checkout page with query parameters
-  const queryString = `?cusRef=${initialState.stripeId}&id=${initialState.id}&amount=${userInfo.wallet}&email=${initialState.email}`;
-  window.location.href = `${import.meta.env.VITE_DOMAIN}/checkoutDonor${queryString}`;
+  // const queryString = `?cusRef=${initialState.stripeId}&id=${initialState.id}&amount=${userInfo.wallet}&email=${initialState.email}`;
+
+  // window.location.href = `${import.meta.env.VITE_DOMAIN}/checkoutDonor${queryString}`;
   };
 
   return (
@@ -76,7 +100,11 @@ export default function WalletForm({
       
       {/* <div className="d-flex justify-content-end align-items-center "> */}
       <div className="d-flex justify-content-center align-items-center ">
-        
+        {/* {userInfo.wallet > 0 ? (
+        <PaymentFormDonor userId={initialState.id} email={initialState.email} refId={initialState.type} amount={userInfo.wallet}  />
+        ) : (<div className="d-flex justify-content-center align-items-center " style={{fontSize: 12, color: "red"}}>Please enter a valid amount! </div>)}
+     */}
+
       <Button
           className="getstarted2"
           type="submit"

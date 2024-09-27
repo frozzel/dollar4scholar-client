@@ -13,6 +13,7 @@ export default function DonarWallet({
   const [busy, setBusy] = useState(false);
 
   const { updateNotification } = useNotification();
+  console.log(initialState);
 
   const handleSubmit = async (data) => {
     setBusy(true);
