@@ -34,7 +34,7 @@ export default function WalletForm({
 
     const getToken = async (userId, email, refId, amount) => {
       const response = await getAnAcceptPaymentPageDonor( userId, email, refId, amount);
-      console.log("Form Token function", response);
+      // console.log("Form Token function", response);
       const form = document.createElement('form');
       form.method = 'post';
       form.action = 'https://test.authorize.net/payment/payment';
