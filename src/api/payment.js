@@ -36,7 +36,6 @@ export const getAnAcceptPaymentPageDonor = async (userId, email, refId, amount) 
         amount,
     };
    
-    console.log("API pass", userId, email, refId, amount);
     try {
         const { data } = await client.post(`/auth/paymentPageDonor/${userId}`, params, {
             headers: {
@@ -44,7 +43,6 @@ export const getAnAcceptPaymentPageDonor = async (userId, email, refId, amount) 
             },
             
         });
-        console.log("Data API",data);
         return data;
     }
     catch (error) {

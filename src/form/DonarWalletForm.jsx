@@ -18,7 +18,6 @@ export default function WalletForm({
     name: userName || "", 
     wallet: walletValue || ""
   });
-  const [formToken, setFormToken] = useState('');
 
   const handleChange = ({ target }) => {
     const { value, name } = target;
@@ -27,43 +26,33 @@ export default function WalletForm({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("User Info", userInfo);
     const formData = new FormData();
     for (let key in userInfo) {
         if (key) formData.append(key, userInfo[key]);
     }
+
+
     const getToken = async (userId, email, refId, amount) => {
       const response = await getAnAcceptPaymentPageDonor( userId, email, refId, amount);
-      setFormToken(response);
-      return console.log("Form Token function", response);
+      console.log("Form Token function", response);
+      const form = document.createElement('form');
+      form.method = 'post';
+      form.action = 'https://test.authorize.net/payment/payment';
+      form.id = 'formAuthorizeNetTestPage';
+      form.name = 'formAuthorizeNetTestPage';
+ 
+      const tokenInput = document.createElement('input');
+      tokenInput.type = 'hidden';
+      tokenInput.name = 'token';
+      tokenInput.value = response;
+ 
+      form.appendChild(tokenInput);
+      document.body.appendChild(form);
+      
+      form.submit();
     }
-    getToken(initialState.id, initialState.email, initialState.type, Number(userInfo.wallet));
-     // Perform a POST request using a dynamically created form
-     const form = document.createElement('form');
-     form.method = 'post';
-     form.action = 'https://test.authorize.net/payment/payment';
-
-     const tokenInput = document.createElement('input');
-     tokenInput.type = 'hidden';
-     tokenInput.name = 'token';
-     tokenInput.value = formToken;
-
-     form.appendChild(tokenInput);
-     document.body.appendChild(form);
-     
-     form.submit();
-
-
-    // window.location.href = `https://test.authorize.net/payment/payment/${formToken}`;
-    // const walletValue = parseFloat(userInfo.wallet); // Convert wallet value to a number
-    // const jsonPayload = { wallet: walletValue }; // Create JSON object
-
-    // onSubmit(jsonPayload); // Submit the JSON object
-
-     // Redirect to checkout page with query parameters
-  // const queryString = `?cusRef=${initialState.stripeId}&id=${initialState.id}&amount=${userInfo.wallet}&email=${initialState.email}`;
-
-  // window.location.href = `${import.meta.env.VITE_DOMAIN}/checkoutDonor${queryString}`;
+     getToken(initialState.id, initialState.email, initialState.type, Number(userInfo.wallet)); 
+  
   };
 
   return (
@@ -96,14 +85,9 @@ export default function WalletForm({
       </div>
      
       <hr />
-      {/* <div className="d-flex justify-content-center align-items-center " style={{fontSize: 12, color: "red"}}>Coming Soon! </div> */}
-      
-      {/* <div className="d-flex justify-content-end align-items-center "> */}
+  
       <div className="d-flex justify-content-center align-items-center ">
-        {/* {userInfo.wallet > 0 ? (
-        <PaymentFormDonor userId={initialState.id} email={initialState.email} refId={initialState.type} amount={userInfo.wallet}  />
-        ) : (<div className="d-flex justify-content-center align-items-center " style={{fontSize: 12, color: "red"}}>Please enter a valid amount! </div>)}
-     */}
+
 
       <Button
           className="getstarted2"
@@ -113,16 +97,8 @@ export default function WalletForm({
           {busy ? <ImSpinner3 className="spinner-border" /> : btnTitle}
 
         </Button>
-{/* 
-          <Button variant="outline-*" target="_blank" href="https://www.skrill.com/en-us/business/integration/" >
-
-          <img alt="Pay by Skrill purple button 245x75 PNG" src="https://www.skrill.com/fileadmin/content/images/brand_centre/Pay_by_Skrill/skrill-payby-btn-purple_245x75.png" width="245" height="75" />
-
-          </Button> */}
-
 
         </div>
-        {/* <div className="d-flex justify-content-center align-items-center " style={{fontSize: 9, color: "red"}}>We are changing are payment provider please wait while we update our system!</div> */}
 
     </form>
     
