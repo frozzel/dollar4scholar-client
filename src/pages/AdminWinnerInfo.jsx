@@ -51,15 +51,21 @@ const AdminWinnerInfo = () => {
     const { updateNotification } = useNotification();
     const {notification} = useNotification();
     const [active, setActive] = useState(true); // Add active state
-    
+    const [enrolled, setEnrolled] = useState([]);
 
     const fetchProfile = async () => {
         const { error, winner } = await getWinnerById(userId);
           if (error) return updateNotification("error", error);
+          setEnrolled(winner.studentsEntered)
           setActive(winner.active)
           setUser(winner);
     };
+    //////////// calculate profit /////////
+    const calProfit = enrolled.length * .87;
 
+    const profit = Math.round(calProfit*100)/100
+    
+    
     const handleClick = () => {
         if (active) {
             const { error } = setActiveStatus(userId, {active: false});
@@ -77,7 +83,7 @@ const AdminWinnerInfo = () => {
 
     useEffect(() => {
         if (userId)fetchProfile() && window.scrollTo(0, 0);
-    }, [authInfo, userId]);
+    }, []);
 
     useEffect(() => {
         setMessage(notification)
@@ -141,7 +147,7 @@ const AdminWinnerInfo = () => {
 
                       
                   </div>
-                  <CardComponent address={address} phone={phone} email={email} birth={birth} dateStarted={user.dateStarted} dateFinished={user.dateFinished} pot={user.pot} active={active}/>
+                  <CardComponent address={address} phone={phone} email={email} birth={birth} dateStarted={user.dateStarted} dateFinished={user.dateFinished} pot={user.pot} active={active} profit={profit}/>
               </div>
               <div className="d-flex justify-content-center mb-2 ">
                   <Button onClick={handleClick} type="button" className="getstarted2 " variant="outline-*" style={{textDecoration: 'none', outline: "none"}}>Open/Close</Button>
@@ -174,7 +180,7 @@ const AdminWinnerInfo = () => {
 }
 };
 
-const CardComponent = ({ birth, email, address, phone, dateStarted, dateFinished, pot, active }) => {
+const CardComponent = ({ birth, email, address, phone, dateStarted, dateFinished, pot, active, profit }) => {
     return (
         <div className="row about-list">
                                 <div className="col-md-6">
@@ -196,7 +202,7 @@ const CardComponent = ({ birth, email, address, phone, dateStarted, dateFinished
                                     </div>
                                     <div className="media">
                                         <label>Profit</label>
-                                        <p>${Math.round(pot * 15)/100}</p>
+                                        <p>${profit}</p>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -214,7 +220,7 @@ const CardComponent = ({ birth, email, address, phone, dateStarted, dateFinished
                                     </div>
                                     <div className="media">
                                         <label>Pay Out</label>
-                                        <p>${pot - Math.round(pot * 15)/100}</p>
+                                        <p>${pot}</p>
                                     </div>
                                     <div className="media">
                                         <label>Active</label>
