@@ -23,6 +23,7 @@ import AdminWinnerInfo from "./pages/AdminWinnerInfo";
 import CheckoutForm from "./components/CheckoutForm";
 import CheckoutFormDonor from "./components/CheckoutFormDonor";
 import Return from "./components/Return";
+import Frame from "./pages/Frame";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/checkout" element={<CheckoutForm />} />
         <Route path="/checkoutDonor" element={<CheckoutFormDonor />} />
           <Route path="/return" element={<Return />} />
+          <Route path="/frame" element={<Frame />} />
       </Routes>
     <Footer />
    
