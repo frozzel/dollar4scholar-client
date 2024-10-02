@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import { getCurrentPot } from '../api/scholarship';
 import { Button } from 'react-bootstrap';
 import { useAuth } from "../hooks";
@@ -50,6 +50,8 @@ const Dashboard = () => {
     const [walletState, setWallet] = useState(null);
     const [showBuyInModal, setShowBuyInModal] = useState(false);
     const [buyInState, setBuyIn] = useState(null);
+    const iframeRef = useRef(null);
+
     
     
     const fetchProfile = async () => {
@@ -182,7 +184,20 @@ const Dashboard = () => {
     useEffect(() => {
         fetchPot();
       }, []);
-    
+
+    useEffect(() => {
+        const handleMessage = (event) => {
+            if (event.data === 'closeFrame') {
+                iframeRef.current.remove();
+            }
+        };
+
+        window.addEventListener('message', handleMessage);
+
+        return () => {
+            window.removeEventListener('message', handleMessage);
+        };
+    }, []);
 
     if (!isLoggedIn) {
         return (
