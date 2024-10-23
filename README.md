@@ -4,7 +4,7 @@
 
 
    # Dollar 4 Scholar   
-   [![SERVER](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=ServerSerever&logoColor=white)](https://github.com/frozzel/dollar4scholar-server) [![DIGITALOCEAN](https://img.shields.io/badge/DigitalOcean-0080FF.svg?style=for-the-badge&logo=DigitalOcean&logoColor=white)](https://dollar4scholar.com)
+   [![GITHUB](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=Server&logoColor=white)](https://github.com/frozzel/dollar4scholar-server) [![DIGITALOCEAN](https://img.shields.io/badge/DigitalOcean-0080FF.svg?style=for-the-badge&logo=DigitalOcean&logoColor=white)](https://dollar4scholar.com)
  
  ---
 
