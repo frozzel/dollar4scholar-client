@@ -4,14 +4,14 @@
 
 
    # Dollar 4 Scholar   
-   [![Github](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/frozzel/dollar4scholar-client) [![DIGITALOCEAN](https://img.shields.io/badge/DigitalOcean-0080FF.svg?style=for-the-badge&logo=DigitalOcean&logoColor=white)](https://dollar4scholar.com)
+   [![SERVER](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=ServerSerever&logoColor=white)](https://github.com/frozzel/dollar4scholar-server) [![DIGITALOCEAN](https://img.shields.io/badge/DigitalOcean-0080FF.svg?style=for-the-badge&logo=DigitalOcean&logoColor=white)](https://dollar4scholar.com)
  
  ---
 
 
 
   ## Description
- This Lottery is open for College and University student Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw. The Development utilizes a multitude of integrations including: Stripe, Cloudinary, Emailjs, Brevo (email client & CRM).
+ This Lottery is open for College and University student Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw. The Development utilizes a multitude of integrations including: Authorize.net, Cloudinary, Emailjs, Brevo (email client & CRM).
  
 
 
