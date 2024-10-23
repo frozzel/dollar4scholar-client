@@ -3,7 +3,7 @@
 
 
 
-   # Dollar 4 Scholar   
+   # Dollar 4 Scholar Client
    [![SERVER](https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://github.com/frozzel/dollar4scholar-server) [![DIGITALOCEAN](https://img.shields.io/badge/DigitalOcean-0080FF.svg?style=for-the-badge&logo=DigitalOcean&logoColor=white)](https://dollar4scholar.com)
 
  
